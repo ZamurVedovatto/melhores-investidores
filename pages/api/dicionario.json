@@ -1,0 +1,1079 @@
+[
+  {
+    "termo": "Ação",
+    "inicial": "A",
+    "conteudo": [
+      "Representa um pequeno pedaço de determinada empresa",
+      "Ao comprar uma ação você se torna dono de uma parte dessa companhia",
+      "Como o investidor passa a se tornar sócio, participa tanto dos lucros como dos prejuízos da empresa"
+    ]
+  },
+  {
+    "termo": "Ação Ordinária",
+    "inicial": "A",
+    "conteudo": [
+      "É representada pelo número 3 após as quatro letras do código do ativo",
+      "Os detentores de ações ordinárias nominativas (ON) têm o direito de voto nas assembleias da empresa",
+      "Contudo, no caso de um pequeno investidor, esse direito é bastante limitado, já que seu voto pode ser “irrelevante” perto dos grandes investidores"
+    ]
+  },
+  {
+    "termo": "Ação Preferencial",
+    "inicial": "A",
+    "conteudo": [
+      "É representada pelo número 4 após as quatro letras do código do ativo",
+      "As ações preferenciais nominativas (PN) são exclusivas do mercado brasileiro, não existem em alguns mercados mais desenvolvidos, como o americano, por exemplo",
+      "Esse tipo de ação não dá direito de voto ao acionista, contudo, são “preferenciais” no recebimento de dividendos",
+      "Podem ter códigos 5 e 6 também, quando são PNs de Classes diferentes"
+    ]
+  },
+  {
+    "termo": "Ação UNIT",
+    "inicial": "A",
+    "conteudo": [
+      "É representada pelo número 11 após as quatro letras do código do ativo",
+      "É um \"pacote\" com ações ON e PN, com a quantidade de cada tipo sendo definida por cada empresa",
+      "Donos desse tipo de ativo têm os mesmos direitos quanto ao recebimento de dividendos e direito a voto que ações PN ou ON comuns, proporcionais à participação de cada papel dentro da unit"
+    ]
+  },
+  {
+    "termo": "Acionista",
+    "inicial": "A",
+    "conteudo": [
+      "É o detentor de pelo menos uma ação de uma empresa"
+    ]
+  },
+  {
+    "termo": "ADR’s (American Depositary Receipts)",
+    "inicial": "A",
+    "conteudo": [
+      "São certificados de depósito representativos de valores mobiliários (Ações ou Debêntures) emitidos por um determinado país e negociados no mercado americano",
+      " A Vale, tem uma ADR na NYSE (Bolsa de NY), com o ticker VALE, fazendo com que os investidores consigam a comprar por lá"
+    ]
+  },
+  {
+    "termo": "Agente Autônomo de Investimentos",
+    "inicial": "A",
+    "conteudo": [
+      "É Responsável pela prospecção de clientes para as Corretoras",
+      "Possuem o papel de informar detalhadamente os produtos financeiros da Corretora e fazer o registro de ordens de seus clientes",
+      "São proibidos de investir sem autorização prévia e também de indicar produtos para seus clientes"
+    ]
+  },
+  {
+    "termo": "Alavancagem",
+    "inicial": "A",
+    "conteudo": [
+      "Utilização de recursos de terceiros para aumentar a possibilidade de lucro de uma operação, aumentando conseqüentemente o risco da mesma"
+    ]
+  },
+  {
+    "termo": "Aluguel de ações",
+    "inicial": "A",
+    "conteudo": [
+      "Alguns investidores podem querer ganhar com a queda das ações em movimentos rápidos do mercado, e para isso eles precisarão alugar a ação de outro investidor",
+      "Da mesma forma que podemos alugar uma casa, no mercado de ações também existe a possibilidade de emprestar temporariamente a propriedade das suas ações para outros investidores",
+      "É uma operação através da qual os investidores proprietários dos títulos disponibilizam os mesmos para empréstimos no curto prazo (já que não querem trabalhar com as oscilações, mas com isso podem remunerar sua posição)"
+    ]
+  },
+  {
+    "termo": "Análise Fundamentalista",
+    "inicial": "A",
+    "conteudo": [
+      "Uma análise fundamentalista busca fazer uma análise tanto qualitativa quanto quantitativa da empresa, entendendo o setor em que ela está inserida, avaliando as demonstrações financeiras e estabelecendo um preço justo para empresa",
+      "Vale ressaltar que, na análise fundamentalista, são considerados fatores que podem afetar o potencial da empresa no médio e longo prazo, assim como a possibilidade de crescimento e principalmente a capacidade de gerar lucro para o acionista"
+    ]
+  },
+  {
+    "termo": "Análise técnica ou gráfica",
+    "inicial": "A",
+    "conteudo": [
+      "A análise técnica, diferentemente da fundamentalista, analisa apenas o preço dos ativos para realizar as operações",
+      "Identificando diferentes padrões de altas e baixas nos preços de ativos, os investidores realizam as operações, geralmente de curto prazo",
+      " Na análise técnica acredita-se que todos os fatores externos já estão embutidos no ultimo preço da ação e que os preços se movimentam em tendência",
+      "Como a análise gráfica foca em volatilidade de curto prazo, os dividendos pagos pelas empresas não são importantes"
+    ]
+  },
+  {
+    "termo": "Aporte",
+    "inicial": "A",
+    "conteudo": [
+      "O aporte é o momento em que o investidor utiliza seu dinheiro na compra de ativos",
+      " O aporte pode ser semanal, mensal, trimestral, ou sem regularidade, depende do perfil do investidor"
+    ]
+  },
+  {
+    "termo": "Ativo",
+    "inicial": "A",
+    "conteudo": [
+      "Tudo aquilo que pode ter algum valor atribuído a ele"
+    ]
+  },
+  {
+    "termo": "Balanço Patrimonial",
+    "inicial": "B",
+    "conteudo": [
+      "O balanço patrimonial é uma demonstração contábil que tem, por finalidade, apresentar a posição contábil, financeira e econômica de uma entidade (em geral, uma empresa) em determinada data, representando uma posição estática (posição ou situação do patrimônio em determinada data)",
+      "O balanço patrimonial apresenta os ativos (bens e direitos), passivos (exigibilidades e obrigações) e o patrimônio líquido, que é resultante da diferença entre o total de ativos e o total de passivos",
+      "O balanço pode ser considerado como uma igualidade contabilística dividida em dois membros, o primeiro membro é representado pelo ativo, e o segundo membro pelo passivo e capital próprio da empresa"
+    ]
+  },
+  {
+    "termo": "BDR’s",
+    "inicial": "B",
+    "conteudo": [
+      "BDR significa “Brazilian Depositary Receipts” ou Certificado de Depósito de Valores Mobiliários",
+      "Basicamente, são certificados emitidos por bancos brasileiros que representam as ações das empresas estrangeiras e estão vinculados aos papéis delas no exterior",
+      "Por exemplo: o NFLX34 é um BDR da Netflix aqui na Bovespa, que acompanha sua variação",
+      "Os BDR’s pagam dividendos"
+    ]
+  },
+  {
+    "termo": "BC/BACEN",
+    "inicial": "B",
+    "conteudo": [
+      "É o Banco Central do Brasil, que regulamenta as instituições financeiras e tem como função gerir a política econômica do país"
+    ]
+  },
+  {
+    "termo": "Bear Market",
+    "inicial": "B",
+    "conteudo": [
+      "É um jargão utilizado quando o mercado está em baixa",
+      "A ideia é que o urso (em inglês, bear) ataca suas presas de cima para baixo, assim como o gráfico de cotações em baixa"
+    ]
+  },
+  {
+    "termo": "Benchmark",
+    "inicial": "B",
+    "conteudo": [
+      "Índice de referência para avaliar a performance de um determinado tipo de investimento",
+      "Muitos FIIs utilizam o IFIX como benchmark, por exemplo"
+    ]
+  },
+  {
+    "termo": "Blue chips",
+    "inicial": "B",
+    "conteudo": [
+      "São as grandes e mais famosas empresas da bolsa de valores",
+      "Dessa forma, atraem mais investidores pela possibilidade de uma maior segurança em um negócio sólido, além da distribuição de dividendos",
+      "Além disso, empresas blue chips costumam ter mais liquidez (são mais negociadas) e tem maior participação no índice Ibovespa",
+      "Por outro lado, por já serem empresas consolidadas tendem a ter um crescimento menor que as small caps"
+    ]
+  },
+  {
+    "termo": "Bonificação",
+    "inicial": "B",
+    "conteudo": [
+      "A bonificação é a distribuição gratuita de novas ações aos atuais acionistas",
+      "Isso acontece quando a companhia realiza um aumento de capital social, distribuindo ações de forma proporcional à posição de cada acionista",
+      "A Itaúsa, por exemplo, já distribuiu 0,1 ações para cada 1 ação possuída pelos seus acionistas"
+    ]
+  },
+  {
+    "termo": "Bull Market",
+    "inicial": "B",
+    "conteudo": [
+      "É um jargão utilizado quando o mercado está em alta",
+      "A ideia é que o touro (do inglês, bull) ataca suas presas de baixo para cima, assim como o gráfico de cotações em alta"
+    ]
+  },
+  {
+    "termo": "Buy and Hold",
+    "inicial": "B",
+    "conteudo": [
+      "Estratégia de investimento de longo prazo, o ato de comprar um ativo e “segurá-lo”",
+      "Esse tipo de estratégia é indicada para acionistas que querem ser sócios de empresas e se beneficiar de seus resultados futuros e dos possíveis dividendos ou valorização da cota",
+      "Nessa estratégia, o investidor procura sempre fazer aportes regulares, reinvestir os dividendos e escolher ativos de qualidade e de boa gestão"
+    ]
+  },
+  {
+    "termo": "CDB",
+    "inicial": "C",
+    "conteudo": [
+      "CDB significa Certificado de Depósito Bancário, e é um título de renda fixa, oferecido por bancos",
+      "Na prática, você empresta dinheiro ao banco, que te remunera com juros",
+      "A remuneração é definida no ato da contratação do CDB, e pode variar de acordo com o valor total aplicado, o prazo do CDB, e a saúde financeira do banco emissor e o tipo de taxa contratada que pode ser prefixada ou pós fixada atrelada a um indexador como o CDI"
+    ]
+  },
+  {
+    "termo": "CDI",
+    "inicial": "C",
+    "conteudo": [
+      "O CDI (Certificado de Depósito Interbancário) representa a taxa pela qual bancos e instituições financeiras emprestam dinheiro umas às outras",
+      "Ou seja, quando um banco tem um capital acima de suas despesas ele utiliza esse dinheiro sobrando para emprestar para outros bancos, e a taxa cobrada de juros é o CDI",
+      "Ele é calculado diariamente e seu valor está diretamente ligado (e sempre muito próximo) à taxa SELIC. "
+    ]
+  },
+  {
+    "termo": "Circuit Breaker",
+    "inicial": "C",
+    "conteudo": [
+      "É um mecanismo disparado pela bolsa de valores para interromper a sessão quando ocorrem oscilações muito bruscas e atípicas no mercado de ações",
+      "Na B3, é acionado em 3 momentos:",
+      "Queda de 10%: Negociações paralisadas por 30 minutos",
+      "Queda de 15%: Negociações paralisadas por 1 hora",
+      "Queda de 20% Negociações interrompidas por tempo indeterminado"
+    ]
+  },
+  {
+    "termo": "COPOM",
+    "inicial": "C",
+    "conteudo": [
+      "É o Comitê de Política Monetária, Comitê que tem como objetivo estabelecer as diretrizes da política monetária e definir a taxa básica de juros (SELIC)",
+      "A reunião do órgão ocorre a cada 45 dias"
+    ]
+  },
+  {
+    "termo": "Commodity",
+    "inicial": "C",
+    "conteudo": [
+      "Bem ou produto de origem primária comercializado nas bolsas de mercadorias e valores de todo o mundo e que possui um grande valor comercial e estratégico",
+      "Geralmente, trata-se de um recurso mineral, vegetal ou agrícola, tais como o petróleo, carvão mineral, soja, cana-deaçúcar e outros",
+      "Plural: commodities"
+    ]
+  },
+  {
+    "termo": "Consultor Financeiro",
+    "inicial": "C",
+    "conteudo": [
+      "Orienta a carteira de forma direta, pode indicar compra e venda de ativos e fundos, diferente dos Agentes Autônomos",
+      "Porém, assim como eles, não pode alocar dinheiro de clientes sem autorização prévia"
+    ]
+  },
+  {
+    "termo": "Contratos Futuros",
+    "inicial": "C",
+    "conteudo": [
+      "São contratos de compra de certa mercadoria no futuro a um preço préestabelecido entre dois investidores",
+      "Podem estar relacionados a investimento em contratos de commodities (como boi gordo, café, milho), índices (como o Ibovespa) e até mesmo de dólar"
+    ]
+  },
+  {
+    "termo": "Corretagem",
+    "inicial": "C",
+    "conteudo": [
+      "Taxa cobrada pela corretora para intermediar a operação",
+      "Pode ser fixa ou variável dependendo de cada corretora",
+      "A corretagem é cobrada tanto na ordem de compra, quanto na de venda"
+    ]
+  },
+  {
+    "termo": "Cotação",
+    "inicial": "C",
+    "conteudo": [
+      "Preço pelo qual um determinado ativo está sendo negociado naquele momento"
+    ]
+  },
+  {
+    "termo": "Crise de 1929",
+    "inicial": "C",
+    "conteudo": [
+      "A Grande Depressão, também conhecida como Crise de 1929, foi uma grande depressão econômica que teve início em 1929, e que persistiu ao longo da década de 1930, terminando apenas com a Segunda Guerra Mundial",
+      "A Grande Depressão é considerada o pior e o mais longo período de recessão econômica do sistema capitalista do século XX",
+      "Este período de depressão econômica causou altas taxas de desemprego, quedas drásticas do produto interno bruto de diversos países, bem como quedas drásticas na produção industrial, preços de ações, e em praticamente todo o medidor de atividade econômica, em diversos países no mundo"
+    ]
+  },
+  {
+    "termo": "CVM",
+    "inicial": "C",
+    "conteudo": [
+      "É a Comissão de Valores Mobiliários, órgão federal vinculado ao ministério da economia que fiscaliza o mercado de valores mobiliários"
+    ]
+  },
+  {
+    "termo": "DARF",
+    "inicial": "D",
+    "conteudo": [
+      "Documento de Arrecadação de Receitas Federais",
+      "Sempre que o investidor fizer uma operação em que o imposto não é tributado na fonte, ele deve apurar o imposto a ser pago e preencher uma DARF, para quitar seus débitos com a Receita Federal",
+      "Por exemplo: na venda de FIIs com lucro, o investidor deve calcular os 20% de imposto sobre o lucro e pagar uma DARF"
+    ]
+  },
+  {
+    "termo": "Data Com",
+    "inicial": "D",
+    "conteudo": [
+      "A data em que o investidor deve estar de posse das ações para receber os proventos",
+      "Para garantir o recebimento dos proventos, o investidor só poderá vender o ativo a partir da data seguinte à Data Com (Com Dividendos), dia esse chamado de Data Ex"
+      
+    ]
+  },
+  {
+    "termo": "Data Ex",
+    "inicial": "D",
+    "conteudo": [
+      "É a data Ex-Dividendos, dia seguinte à Data Com",
+      "Data a partir da qual as ações compradas não terão mais direito de receber os dividendos anunciados",
+      "Não é a Data do Pagamento",
+      "É importante ressaltar também que na Data Ex a cotação sofre desconto proporcional ao que será pago em dividendos",
+      "Por exemplo: Se a PETR4 está cotada a R$20,00 e vai pagar R$1,00 por ação em dividendos, na Data Ex ela vai abrir cotada a R$19,00"
+    ]
+  },
+  {
+    "termo": "Day Trade",
+    "inicial": "D",
+    "conteudo": [
+      "Termo usado no mercado de renda variável para compras e vendas feitas no mesmo dia",
+      "Nesse estilo, os fatores mais qualitativos da empresa pesam menos e os eventos do cotidiano acabam por ser mais importantes na valorização ou desvalorização do papel"
+    ]
+  },
+  {
+    "termo": "Debêntures",
+    "inicial": "D",
+    "conteudo": [
+      "Debêntures são títulos de dívidas emitidos por empresas para financiar a construção de alguma obra da empresa ou expansão",
+      "As formas de remuneração e o prazo são determinados na hora da compra",
+      "A remuneração pode ser prefixada ou pós fixada"
+    ]
+  },
+  {
+    "termo": "Debêntures Comuns",
+    "inicial": "D",
+    "conteudo": [
+      "São Debêntures com incidência de IR de maneira regressiva relacionada ao tempo de aplicação, assim, quanto maior o tempo de resgate, menor será a incidência do IR",
+      "As alíquotas de IR variam entre 22,5% e 15% de prazo com o tempo de aplicação"
+    ]
+  },
+  {
+    "termo": "Debêntures Incentivadas",
+    "inicial": "D",
+    "conteudo": [
+      "São Debêntures isentos de IR e IOF e normalmente são usadas para financiar projetos de infraestrutura, como aeroportos, rodovias e ferrovias"
+    ]
+  },
+  {
+    "termo": "Desdobramento",
+    "inicial": "D",
+    "conteudo": [
+      "É quando uma empresa listada divide suas ações disponíveis em um número maior de ações, geralmente trazendo mais liquidez ao papel",
+      "Exemplo: em 2019 a Magazine Luiza fez um desdobramento 1:8 nas suas ações",
+      "Assim, para cada 1 ação que o investidor tinha em carteira, passou a ter 8, com o preço dividido na mesma proporção (não há ganho direto para o acionista)"
+    ]
+  },
+  {
+    "termo": "Dividendos",
+    "inicial": "D",
+    "conteudo": [
+      "Dividendos são uma parte dos lucros de uma empresa que são distribuídos aos seus acionistas como forma de remuneração no encerramento do exercício social aferido após os recolhimentos de impostos",
+      "Atualmente, eles são isentos de tributação no Brasil, pois o imposto já foi cobrado em cima dos lucros da empresa distribuidora de dividendos"
+    ]
+  },
+  {
+    "termo": "EBITDA",
+    "inicial": "E",
+    "conteudo": [
+      "Do inglês Earnings Before Interest, Taxes, Depreciation and Amortization",
+      "Em português, é o Lucro da empresa antes de Juros, Impostos, Depreciação e Amortização (LAJIDA)",
+      "É muito usado, pois é um indicador financeiro que concentra apenas o resultado ligado à atividade-fim da empresa, dando uma boa noção do desempenho operacional da mesma"
+    ]
+  },
+  {
+    "termo": "EBIT",
+    "inicial": "E",
+    "conteudo": [
+      "Do inglês, Earnings Before Interest and Taxes",
+      "Em português, Lucro antes de Juros e Impostos",
+      "É um indicador similar ao EBITDA, mas que leva em consideração os efeitos da Depreciação e Amortização dos ativos da empresa",
+      "É também chamado de Lucro Operacional da empresa"
+    ]
+  },
+  {
+    "termo": "Especulação Financeira",
+    "inicial": "E",
+    "conteudo": [
+      "Especulação financeira é a compra de ativos com fins não ao seu uso direto, mas à sua venda futura com lucro, sob condições de incerteza"
+    ]
+  },
+  {
+    "termo": "ESG",
+    "inicial": "E",
+    "conteudo": [
+      "Sigla ESG em inglês para Environmental, social and corporate governance",
+      "Trata-se de três critérios fundamentais para organizações que se preocupam com as pessoas e com o mundo em que vivemos"
+    ]
+  },
+  {
+    "termo": "Efeito manada",
+    "inicial": "E",
+    "conteudo": [
+      "É a tendência humana de repetir ações feitas por outras pessoas",
+      "Na bolsa de valores esse fenômeno pode ser bastante perigoso, já que quando um determinado ativo está sendo bastante comentado e muitas pessoas compram, o investidor tomado pela euforia, sem analisar os fundamentos e o racional do investimento, acaba comprando o ativo na alta e vendendo na baixa"
+    ]
+  },
+  {
+    "termo": "ETF’s",
+    "inicial": "E",
+    "conteudo": [
+      "Exchange-traded fund",
+      "São fundos de investimentos negociados na bolsa com o único objetivo de acompanhar a rentabilidade de determinado indexador",
+      "Ou seja, cada ETF reflete a performance de um determinado índice de referência de um setor/mercado",
+      "Ao comprar um ETF, você compra uma carteira de ações já diversificada por um preço mais acessível",
+      "Um ponto negativo talvez seja que ao comprar um ETF você consequentemente se torna sócio de muitas empresas que não necessariamente investiria se fosse escolher nominalmente"
+    ]
+  },
+  {
+    "termo": "Estratégia Empresarial",
+    "inicial": "E",
+    "conteudo": [
+      "É a definição da rota, a organização dos recursos organizacionais para a caminhada da empresa no mercado",
+      "Estratégias de Crescimento: estratégia empresarial para aumentar os lucros, as vendas, ou a participação do mercado, aumentando o valor da empresa",
+      "Estratégias de estabilidade: quando há operações em diversos setores, a empresa pode querer concentrar suas operações, seus esforços administrativos, nas empresas existentes, sem aumentar suas unidades",
+      "Estratégias de redução: quando os resultados estão abaixo do esperado, ou a sobrevivência está desafiadora, a redução pode ser uma estratégia de melhoria da situação negativa, podendo ser, de reviravolta – mudanças para melhoria; desinvestimento ou liquidação se for o caso."
+    ]
+  },
+  {
+    "termo": "Fluxo de Caixa",
+    "inicial": "F",
+    "conteudo": [
+      "Em Finanças, o fluxo de caixa refere-se ao fluxo do dinheiro no caixa da empresa, ou seja, ao montante de caixa recolhido e gasto por uma empresa durante um período de tempo definido, algumas vezes ligado a um projeto específico",
+      "O fluxo de caixa refere-se ao movimento de dinheiro no período passado, enquanto o orçamento é o seu equivalente para períodos futuros"
+    ]
+  },
+  {
+    "termo": "FGC (Fundo Garantidor de Crédito)",
+    "inicial": "F",
+    "conteudo": [
+      "Entidade privada que garante o reembolso de até R$250.000,00 por CPF em algumas aplicações caso o banco ou entidade financeira fique inadimplente ou declare falência",
+      "São protegidos pelo FGC investimentos em títulos de Renda Fixa como CDB, LCI, LCA, LC, entre outros",
+      "Dessa forma, em caso de falência do banco emissor do CDB, por exemplo, o investidor terá garantido seu dinheiro aplicado + juros até a data de falência"
+    ]
+  },
+  {
+    "termo": "Follow ON",
+    "inicial": "F",
+    "conteudo": [
+      "É o nome dado ao evento onde uma empresa que já possui capital aberto emite mais ações para serem negociadas no mercado"
+    ]
+  },
+  {
+    "termo": "Fornecedor",
+    "inicial": "F",
+    "conteudo": [
+      "O termo deriva do verbo fornecer, que faz referência a prover ou providenciar o necessário para um determinado fim"
+    ]
+  },
+  {
+    "termo": "Free Float",
+    "inicial": "F",
+    "conteudo": [
+      "Mede a porcentagem de ações da companhia que estão em livre circulação no mercado",
+      "Um alto valor de Free Float normalmente significa maior liquidez aos papéis e menos controle na mão do acionista majoritário"
+    ]
+  },
+  {
+    "termo": "Fundos de investimento",
+    "inicial": "F",
+    "conteudo": [
+      "Os fundos de investimentos reúnem o capital de diversos investidores, com a aquisição de cotas, e são geridos por um gestor profissional, que é remunerado pelo seu trabalho",
+      "Os fundos de investimentos podem ter diversos focos, como fundos multimercados, fundos de ações, fundos de cambiais, fundos de Renda Fixa, entre outros",
+      "Algumas das vantagens são a expertise de um gestor profissional e a diversificação com a aquisição de uma só cota, já que geralmente são diversos ativos diferentes que compõem a carteira do fundo",
+      "Uma desvantagem do investimento em fundos de investimento, é o pagamento de taxas, como as de administração e performance, que “comem” parte da rentabilidade do investidor"
+    ]
+  },
+  {
+    "termo": "Fundos Imobiliários/FII",
+    "inicial": "F",
+    "conteudo": [
+      "Fundos de Investimento Imobiliário (FIIs) são negociados na bolsa de valores",
+      "Assim como nas ações, o investidor ganha dinheiro tanto na valorização da cota, quanto na distribuição de dividendos, que, diferente das ações, costumam ser mensais",
+      "Os fundos imobiliários são fundos responsáveis por gerir e administrar um determinado empreendimento",
+      "Na prática, é como se o investidor se tornasse proprietário de parte de um imóvel, e recebesse periodicamente na conta o aluguel do inquilino, de forma proporcional aos número de cotas adquirido. "
+    ]
+  },
+  {
+    "termo": "Fundos Imobiliários de Papel",
+    "inicial": "F",
+    "conteudo": [
+      "São FIIs que investem em títulos financeiros de lastro imobiliário, como CRIs",
+      "Em outras palavras, são ativos que recebem fluxos de caixa oriundos de financiamentos imobiliários diversos",
+      "Esses rendimentos são repassados aos cotistas dos fundos de papéis"
+    ]
+  },
+  {
+    "termo": "Fundos Imobiliários de Tijolo",
+    "inicial": "F",
+    "conteudo": [
+      "São FIIs que investem em empreendimentos físicos como lajes corporativas/salas comerciais, galpões industriais/logísticos, universidades, hospitais,hotéis, resorts, shoppings, parques temáticos, lojas independentes de varejo, cemitérios e agências bancárias "
+    ]
+  },
+  {
+    "termo": "Gestão Ativa",
+    "inicial": "G",
+    "conteudo": [
+      "Na gestão ativa, o gestor participa ativamente na escolha dos ativos que farão parte do fundo",
+      "O fundo tem como “meta” obter uma rentabilidade maior que seu benchmark e por isso, costumam ter taxas de administração mais altas"
+    ]
+  },
+  {
+    "termo": "Gestão Passiva",
+    "inicial": "G",
+    "conteudo": [
+      "Na gestão passiva, o fundo busca replicar seu benchmark",
+      "Assim, o fundo tem como “meta” obter uma rentabilidade mais próxima possível do seu índice de referência e por isso, costumam ter taxas de administração mais baixas"
+    ]
+  },
+  {
+    "termo": "Gestor",
+    "inicial": "G",
+    "conteudo": [
+      "É o profissional que administra a carteira do fundo",
+      "Decide que papéis comprar ou vender, de acordo com a política de investimento do fundo",
+      "Sua remuneração é a taxa de administração",
+      "Pode também ser a taxa de performance, dependendo das características do fundo"
+    ]
+  },
+  {
+    "termo": "Governança corporativa",
+    "inicial": "G",
+    "conteudo": [
+      "É o conjunto de práticas que tem o intuito de alinhar os objetivos da administração de uma companhia com os interesses de seus acionistas",
+      "Uma boa governança corporativa é fator essencial para sobrevivência da empresa no longo prazo, além de proteger os acionistas minoritários (nós, investidores) de surpresas como escândalos de corrupção ou fraudes nos balanços",
+      "Na B3, existem vários segmentos onde as empresas são submetidas a diferentes regras e requisitos no que tange a Governança Corporativa das mesmas. Esses se dividem em",
+      "Nível 1: É o nível mais básico, no qual as empresas se comprometem com melhorias na prestação de informações ao mercado e com a dispersão acionária.Empresas nesse segmento divulgam informações adicionais às exigidas em lei, como por exemplo, um calendário anual de eventos corporativos",
+      "Nível 2: É o nível intermediário desta classificação, no qual as empresas se comprometem a aceitar as obrigações contidas no Nível 1, mais um conjunto maior de práticas de governança e de direitos adicionais para os minoritários. Nesse segmento, as empresas podem manter suas ações PN, porém devem oferecer Tag Along de 100% para esses papéis",
+      "Novo Mercado: O Novo Mercado é o segmento de mais alto nível de Governança Corporativo da B3. Embora não garanta que uma empresa listada nesse segmento não terá problemas de governança, o estabelecimento de requisitos rígidos traz mais segurança ao acionista. Entre alguns requisitos do segmento, estão possuir apenas ações ON com Tag Along e número mínimo de Conselheiros independentes"
+    ]
+  },
+  {
+    "termo": "Hedge",
+    "inicial": "H",
+    "conteudo": [
+      "Estratégia que visa a proteção em operações financeiras",
+      "Serve para se proteger a sua carteira de movimentos mais bruscos no mercado financeiro",
+      "Em geral, limita a variação (para cima e para baixo) do ativo a ser operado"
+    ]
+  },
+  {
+    "termo": "Holding",
+    "inicial": "H",
+    "conteudo": [
+      "Empresa que possui, como atividade principal, a participação acionária em uma ou mais empresas",
+      "Por exemplo: A Itaúsa é uma Holding com participação no Itaú, Duratex e Alpargatas"
+    ]
+  },
+  {
+    "termo": "Home Broker",
+    "inicial": "H",
+    "conteudo": [
+      "É uma plataforma digital que possibilita a compra e a venda de títulos e ações",
+      "Cada corretora tem o seu, e é onde o investidor acessa para fazer suas operações em bolsa"
+    ]
+  },
+  {
+    "termo": "IFIX",
+    "inicial": "I",
+    "conteudo": [
+      "O IFIX é o único e principal índice da bolsa referente aos fundos imobiliários",
+      "O objetivo do IFIX é ser o indicador do desempenho médio das cotações dos maiores fundos imobiliários negociados nos mercados de bolsa e de balcão organizado da B3",
+      "Recentemente, a Suno Research criou o seu próprio índice de fundos imobiliários, chamado SUNO3"
+    ]
+  },
+  {
+    "termo": "Indexador",
+    "inicial": "I",
+    "conteudo": [
+      "É qualquer índice utilizado como referência para estabelecer a rentabilidade de algum investimento",
+      "Muitos dos contratos de locação dos FIIs, por exemplo, são indexados ao IGP-M",
+      "Ou seja, são recalculados de acordo com a variação deste índice"
+    ]
+  },
+  {
+    "termo": "Índice de Basiléia",
+    "inicial": "I",
+    "conteudo": [
+      "Mede o grau de alavancagem de uma instituição financeira, ou seja, o quanto de capital de terceiros a instituição utiliza nas suas operações",
+      "Um Índice de Basiléia alto, indica que o banco utiliza muito capital próprio em suas operações, sendo mais conservador",
+      "Se o Índice de Basiléia do banco é baixo, ele utiliza pouco capital próprio, sendo mais agressivo",
+      "Desde 2019, o Banco Central recomenda um Índice de Basiléia mínimo de 8% para as instituições financeiras brasileiras"
+    ]
+  },
+  {
+    "termo": "Índice Ibovespa",
+    "inicial": "I",
+    "conteudo": [
+      "O índice Ibovespa, também chamado de IBOV, é o principal indicador de desempenho do mercado de ações no Brasil",
+      "É chamado de “termômetro do mercado de ações”",
+      "Esse índice nada mais é do que um cálculo feito a partir de uma carteira montada com as ações mais negociadas na bolsa de valores, com pesos diferentes por ação",
+      "Assim é feito uma média do desempenho das ações presentes na carteira",
+      "Por ser o índice de referência do mercado acionário brasileiro, é muitas vezes usados como benchmark nas carteiras dos investidores"
+    ]
+  },
+  {
+    "termo": "Investimento",
+    "inicial": "I",
+    "conteudo": [
+      "Aplicação de recursos, tempo, esforço etc. a fim de se obter algo"
+    ]
+  },
+  {
+    "termo": "Investidor Qualificado",
+    "inicial": "I",
+    "conteudo": [
+      "O investidor qualificado é a pessoa física ou jurídica que possui mais de R$1.000.000 em investimentos no mercado financeiro e que ateste essa condição por escrito",
+      "Muitos FIIs, BDRs e Fundos de Investimentos são restritos a investidores qualificados, dados seus graus de risco"
+    ]
+  },
+  {
+    "termo": "IPCA",
+    "inicial": "I",
+    "conteudo": [
+      "É o Índice de Preços ao Consumidor Amplo, índice oficial de inflação no Brasil, calculado mensalmente pelo IBGE",
+      "O IPCA funciona como uma cesta de produtos consumidos pela população brasileira, mensurando assim o aumento ou diminuição de preços desses insumos",
+      "Por ser o medidor oficial de inflação, costuma ser o indexador de diversos títulos públicos e contratos"
+    ]
+  },
+  {
+    "termo": "IPO",
+    "inicial": "I",
+    "conteudo": [
+      "Initial Public Offering, ou Oferta Pública Inicial",
+      "É quando uma empresa fechada resolve abrir seu capital (vender ações no mercado) e realizar a sua oferta primária de ações",
+      "Após o IPO, as ações da empresa passam a ser negociadas na bolsa de valores"
+    ]
+  },
+  {
+    "termo": "IR",
+    "inicial": "I",
+    "conteudo": [
+      "Sigla para Imposto de Renda",
+      "No mercado de Renda Variável é importante que o investidor se atente para as operações onde há incidência de IR, como na venda de FIIs com lucro"
+    ]
+  },
+  {
+    "termo": "IRRF",
+    "inicial": "I",
+    "conteudo": [
+      "É a sigla para Imposto de Renda Retido da Fonte",
+      "Em certas operações, o imposto de renda devido é retido na fonte, como é o caso do pagamento de Juros sobre Capital Próprio, isentando o investidor de preencher uma DARF para quitar seus débitos",
+      "Em algumas situações o IRRF atua como “dedo-duro”, como nas operações com derivativos, onde ocorre recolhimento de 0,005% na hora da venda como forma de registro da operação executada",
+      "Cabe ao investidor calcular o imposto devido e descontar esta parte já retida"
+    ]
+  },
+  {
+    "termo": "Juros",
+    "inicial": "J",
+    "conteudo": [
+      "É a remuneração paga",
+      "Um título com juros de 8% ao ano, paga ao investidor 8% do valor investido todo ano (juros simples)"
+    ]
+  },
+  {
+    "termo": "Juros Compostos",
+    "inicial": "J",
+    "conteudo": [
+      "Diferentemente dos juros simples, que incidem somente no valor principal, os juros compostos incidem tanto sobre o montante principal quanto sobre os juros já existentes",
+      "Com isso, os juros compostos têm o poder de transformar uma pequena quantia hoje em um grande montante com o passar dos anos",
+      "Por exemplo: Uma ação comprada a 100 reais com rentabilidade de 10% ao ano. Ao final do Ano 1, o investidor terá 110 reais (100 investidos + 10% de juros). Ao final do Ano 2, o montante será de 121 reais (110 do ano anterior + 10% de juros)."
+    ]
+  },
+  {
+    "termo": "JSCP",
+    "inicial": "J",
+    "conteudo": [
+      "É a sigla para Juros Sobre o Capital Próprio",
+      "É um provento semelhante ao dividendo, mas nesse caso há uma tributação de 15% na data do pagamento",
+      "Para os JCP, os impostos são retidos na fonte, e o investidor já recebe o valor livre de impostos na conta de sua corretora"
+    ]
+  },
+  {
+    "termo": "LC",
+    "inicial": "L",
+    "conteudo": [
+      "A letra de câmbio é um ativo de renda fixa emitido por instituições financeiras e o dinheiro captado pelas financeiras é utilizado para o custeio de empréstimos",
+      "Em troca você receberá uma taxa de rentabilidade que se manterá por todo o período, podendo ser uma taxa prefixada ou uma taxa baseada em algum indexador, como o CDI por exemplo"
+    ]
+  },
+  {
+    "termo": "LCA",
+    "inicial": "L",
+    "conteudo": [
+      "LCA (Letras de Crédito Agrícola), semelhantes ao LCI, são títulos emitidos por instituições privadas que serão destinados para financiar o agronegócio (LCA)",
+      "São isentos de IR e são parecidos com os CDBs na remuneração, podendo ser remunerados por uma taxa prefixada ou pós fixada com algum indexador"
+    ]
+  },
+  {
+    "termo": "LCI",
+    "inicial": "L",
+    "conteudo": [
+      "LCI (Letras de Crédito Imobiliário) são títulos emitidos por instituições privadas que serão destinados para financiar o setor imobiliário",
+      "São isentos de IR e são parecidos com os CDBs na remuneração, podendo ser remunerados por uma taxa prefixada ou pós fixada com algum indexador"
+    ]
+  },
+  {
+    "termo": "Liquidez",
+    "inicial": "L",
+    "conteudo": [
+      "É a facilidade de negociação do ativo, quanto maior o volume de negociação, maior é a sua liquidez e mais fácil será a compra ou venda desse ativo"
+    ]
+  },
+  {
+    "termo": "Longo Prazo",
+    "inicial": "L",
+    "conteudo": [
+      "Longo prazo é o período de tempo em que não há fatores fixos de produção, tendo como origem a palavra do latim longu, que significa, na tradução livre, \"aquilo que tem muita longitude/comprimento ou cuja longitude supera a largura\""
+    ]
+  },
+  {
+    "termo": "Lote fracionário",
+    "inicial": "L",
+    "conteudo": [
+      "O investidor que não quiser comprar um lote completo de ações, pode comprar seus ativos no mercado fracionário",
+      "Basta digitar F ao final do ticker (Ex: ITSA4F) e escolher a quantidade entre 1 e 99 ações"
+    ]
+  },
+  {
+    "termo": "Lote Padrão",
+    "inicial": "L",
+    "conteudo": [
+      "É o lote comum utilizado na B3 para compra e venda de ativos, normalmente o lote corresponde a 100 ações",
+      "Para FIIs, o lote padrão já é de 1"
+    ]
+  },
+  {
+    "termo": "Lucro Operacional",
+    "inicial": "L",
+    "conteudo": [
+      "Lucro originado exclusivamente pela operação do negócio, descontando todas as despesas administrativas, operacionais e comerciais",
+      "Também chamado de EBIT. Lucro Operacional = Receita - Despesas Operacionais"
+    ]
+  },
+  {
+    "termo": "Margem de Segurança",
+    "inicial": "M",
+    "conteudo": [
+      "Margem de segurança é a diferença entre o preço da ação no mercado e seu valor intrínseco"
+    ]
+  },
+  {
+    "termo": "Margem Bruta",
+    "inicial": "M",
+    "conteudo": [
+      "Lucro Bruto/Receita Líquida",
+      "Representa a proporção que o lucro bruto representa da Receita",
+      "Quanto maior, melhor"
+    ]
+  },
+  {
+    "termo": "Margem EBITDA",
+    "inicial": "M",
+    "conteudo": [
+      "EBITDA/Receita Líquida",
+      "Representa a proporção que o EBITDA representa da Receita",
+      "Quanto maior, melhor"
+    ]
+  },
+  {
+    "termo": "Margem Líquida",
+    "inicial": "M",
+    "conteudo": [
+      "Lucro Líquido/Receita Líquida",
+      "Relação entre o lucro líquido da empresa e a sua receita líquida de vendas",
+      "Assim como as outras, quanto maior, melhor"
+    ]
+  },
+  {
+    "termo": "Organização",
+    "inicial": "O",
+    "conteudo": [
+      "Associação de pessoas que combinam esforços individuais e em equipe com a finalidade de realizar propósitos coletivos",
+      "Por meio de uma organização torna-se possível perseguir e alcançar objectivos que seriam inatingível para uma pessoa",
+      "Uma grande empresa ou uma pequena oficina, um laboratório ou o corpo de bombeiros, um hospital ou uma escola são todos exemplos de organizações, que e até mega - organizações"
+    ]
+  },
+  {
+    "termo": "Opções",
+    "inicial": "O",
+    "conteudo": [
+      "São um tipo de derivativo que dão ao investidor o direito de optar por comprar ou vender algum ativo em determinada data, por um preço preestabelecido",
+      "Podem ser do tipo Call (opção de compra) ou Put (opção de venda)",
+      "CALL: O investidor paga um valor, chamado de prêmio, pelo direito de comprar a ação no futuro por um preço pré-determinado (strike), podendo exercer ou não este direito",
+      "PUT: O investidor paga o prêmio pelo direito de vender a ação no futuro pelo preço pré determinado (strike), podendo exercer ou não este direito"
+    ]
+  },
+  {
+    "termo": "Passivo",
+    "inicial": "P",
+    "conteudo": [
+      "São as dívidas e obrigações de uma empresa, tudo aquilo que representa um gasto para a companhia"
+    ]
+  },
+  {
+    "termo": "Patrimônio Líquido",
+    "inicial": "P",
+    "conteudo": [
+      "O Patrimônio Líquido é calculado pela subtração de todos os ativos (bens e direitos da empresa) menos todos os passivos (obrigações)",
+      "Dessa forma, o que resta pode ser considerado o capital dos acionistas na empresa",
+      "Compõe o PL: o Capital Social, Reservas de Lucros e Capital, Ações em Tesouraria e Ajustes de avaliação patrimonial"
+    ]
+  },
+  {
+    "termo": "Payout",
+    "inicial": "P",
+    "conteudo": [
+      "O payout se refere à porcentagem do lucro líquido distribuído, no forma de dividendos ou juros sobre capital próprio, aos acionistas da empresa",
+      "No final de cada exercício, é comum que as empresas que tiveram lucro, distribuírem dividendos aos seus acionistas"
+    ]
+  },
+  {
+    "termo": "PDD (Provisão para Devedores Duvidosos)",
+    "inicial": "P",
+    "conteudo": [
+      "É uma provisão obrigatória de bancos, que retém uma quantia de acordo com a chance de calote de um determinado tomador de crédito",
+      "Essa provisão é feita de acordo com o risco de crédito"
+    ]
+  },
+  {
+    "termo": "Perfil de investidor",
+    "inicial": "P",
+    "conteudo": [
+      "Na escolha de seus ativos e construção da carteira de investimentos, é importante que seja mapeado qual o perfil do investidor",
+      "Esse geralmente é dividido entre conservados, moderado e arrojado/agressivo, e cada nível está relacionado com a tolerância ao risco que o investidor tem",
+      "Conservador: Prioriza a segurança em suas aplicações, visando principalmente a manutenção do seu capital e expondo sua carteira a investimentos de baixo risco",
+      "Moderado: Está em uma posição intermediária, entre os perfis conservador e arrojado. O investidor gosta de segurança, porém visa equilibrar risco versus rentabilidade. Buscando ter uma maior rentabilidade quando comparado ao investidor conservador",
+      "Arrojado: Entende que as perdas a curto prazo são momentâneas e necessárias para aproveitar uma maior rentabilidade a longo prazo. Aceita ver grandes flutuações no seu patrimônio"
+    ]
+  },
+  {
+    "termo": "Pregão",
+    "inicial": "P",
+    "conteudo": [
+      "É o momento em que a bolsa de valores está aberto para negociações",
+      "Salvo exceções, o pregão da B3 ocorre entre 10h e 17h. Com o aftermarket entre 17:30h e 18h"
+    ]
+  },
+  {
+    "termo": "Rating",
+    "inicial": "R",
+    "conteudo": [
+      "São avaliações emitidas por empresas de classificação de risco para avaliar o risco de crédito, buscando demonstrar ao investidor a qualidade e saúde financeira do órgão ou empresa emissora"
+    ]
+  },
+  {
+    "termo": "Receita",
+    "inicial": "R",
+    "conteudo": [
+      "É o dinheiro que entrou referente às vendas da companhia",
+      "Representa o total arrecadado pela empresa através de suas atividades no período"
+    ]
+  },
+  {
+    "termo": "Renda Fixa",
+    "inicial": "R",
+    "conteudo": [
+      "São aqueles investimentos cuja remuneração ou sua forma de cálculo podem ser previamente definidas no momento da aplicação",
+      "Os investimentos de renda fixa funcionam como um empréstimo do seu dinheiro ao emissor, como bancos, empresas ou o governo",
+      "Pelo fato de não estarem tão sujeitas às oscilações do mercado e de o investidor conhecer a sua rentabilidade, essas aplicações são consideradas menos arriscadas e, por isso, mais adequadas a quem tem perfil conservador"
+    ]
+  },
+  {
+    "termo": "Renda Variável",
+    "inicial": "R",
+    "conteudo": [
+      "Diferentemente da Renda Fixa, os ativos de renda variável não possuem previsibilidade nos rendimentos",
+      "A renda variável pode consistir na compra de parte de um negócio, como uma empresa ou empreendimento imobiliário, ou ativos como câmbio, commodities e índices",
+      "O preço e sua cotação variam diariamente e de acordo com acontecimentos e movimentações de investidores tanto do mercado interno como externo",
+      "Assim, eles não possuem garantia nos rendimentos"
+    ]
+  },
+  {
+    "termo": "Rentabilidade",
+    "inicial": "R",
+    "conteudo": [
+      "Retorno que o investidor recebe sobre o ativo adquirido"
+    ]
+  },
+  {
+    "termo": "Rentabilidade Nominal",
+    "inicial": "R",
+    "conteudo": [
+      "É o quanto um investimento rendeu, sem descontar a inflação",
+      "Se o preço de uma ação subiu 10% em um ano, essa é a rentabilidade nominal do investimento nesse período"
+    ]
+  },
+  {
+    "termo": "Rentabilidade Real",
+    "inicial": "R",
+    "conteudo": [
+      "É a rentabilidade de determinado investido descontada do valor da inflação no período",
+      "Dessa forma, o que se vê é o ganho real no período",
+      "Se um título rendeu 2% no ano, e a inflação no mesmo período foi de 1%, então a rentabilidade real foi de aproximadamente 1% (para valores exatos, utilizar a Equação de Fischer)"
+    ]
+  },
+  {
+    "termo": "Reserva de Emergência",
+    "inicial": "R",
+    "conteudo": [
+      "É um montante reservado para eventualidades e imprevistos, tais como problemas de saúde, demissões, crises e eventuais momentos em que nossos rendimentos são menores do que os esperados"
+    ]
+  },
+  {
+    "termo": "ROE",
+    "inicial": "R",
+    "conteudo": [
+      "Do inglês, Return on Equity",
+      "É o Retorno sobre o Patrimônio Líquido da empresa",
+      "É um indicador fundamentalista que mede a rentabilidade de dada companhia, com relação ao seu capital próprio (PL)",
+      "Quanto maior, melhor",
+      "Em geral, consideramos que um ROE é bom, quando for recorrentemente maior que 15%",
+      "Mas isso não é uma regra, afinal esse indicador costuma variar entre diferentes setores"
+    ]
+  },
+  {
+    "termo": "SELIC",
+    "inicial": "S",
+    "conteudo": [
+      "A SELIC (Sistema Especial de Liquidação e Custódia) é a taxa de juros básica do Brasil e a meta para a SELIC é definida após a votação pelo comitê de política monetária (COPOM)",
+      "A SELIC é referência, direta ou indiretamente, para a maioria dos investimentos de Renda Fixa",
+      "Com isso, uma queda nessa taxa tende a diminuir os rendimentos dos investimentos de RF",
+      "Ao mesmo tempo, uma queda na SELIC tende a diminuir o custo de oportunidade do investidor, além de diminuir o custo de dívida das empresas brasileiras",
+      "Com a SELIC em sua mínima histórica em 2020, houve um fluxo grande de migração dos investimentos da Renda Fixa para a Renda Variável brasileira"
+    ]
+  },
+  {
+    "termo": "Small Caps",
+    "inicial": "S",
+    "conteudo": [
+      "São empresas com menor valor de mercado",
+      "Alguns classificam como Small Caps, empresas com valor de mercado menor do que R$10 BI",
+      "Elas também poder ser menos líquidas (menos negociadas)",
+      "As Small Caps, por serem empresas menores, podem apresentar potencial de crescimento muito maior que as empresas já consolidadas no mercado",
+      "Todavia, esse potencial de retorno vem aliado ao maior risco, já que costumam ser empresas menos estudadas e sem posição consolidada no mercado"
+    ]
+  },
+  {
+    "termo": "Subscrição",
+    "inicial": "S",
+    "conteudo": [
+      "Quando uma empresa vai aumentar seu Capital Social, ela emite novas ações",
+      "O Direito de Subscrição existe para que o investidor que já é acionista da empresa, tenha preferência na compra dessas novas ações, evitando assim a diluição de sua participação na companhia",
+      "É um direito, e não obrigação do investidor",
+      "Costuma ser positivo para o investidor, que geralmente compra mais ações com desconto"
+    ]
+  },
+  {
+    "termo": "Swing Trade",
+    "inicial": "S",
+    "conteudo": [
+      "As operações de Swing Trade levam alguns dias entre início e fim, podendo durar entre alguns dias e algumas semanas",
+      "Nessa modalidade, a tributação depende do ativo sendo negociado"
+    ]
+  },
+  {
+    "termo": "Tag Along",
+    "inicial": "T",
+    "conteudo": [
+      "É um direito concedido aos acionistas minoritários de receber um percentual do valor pago pelas ações dos controladores no caso de uma troca de comando da empresa",
+      "Por exemplo: se uma empresa tiver Tag Along de 80% em suas ações, e um comprador oferecer 10 reais por ação ao controlador, os acionistas minoritários deverão receber pelo menos 8 reais por ação",
+      "Se o Tag Along fosse de 100%, os minoritários receberiam os mesmos 10 reais do controlador"
+    ]
+  },
+  {
+    "termo": "Taxa de Administração",
+    "inicial": "T",
+    "conteudo": [
+      "Taxa cobrada pelo trabalho do gestor ou administrador pela administração do capital do investidor"
+    ]
+  },
+  {
+    "termo": "Taxa de Performance",
+    "inicial": "T",
+    "conteudo": [
+      "Taxa cobrada pela gestão de um fundo quando sua rentabilidade supera seu índice de referência",
+      "Por exemplo: diversos FIIs tem uma taxa de performance de 20% quando sua rentabilidade supera o IPCA+6% ao ano"
+    ]
+  },
+  {
+    "termo": "Tesouro IPCA+",
+    "inicial": "T",
+    "conteudo": [
+      "É um título de dívida emitido pelo governo",
+      "Paga um taxa de juros híbrida, sendo uma parte atrelada à inflação (IPCA) e de uma taxa prefixada (exemplo: IPCA+3% ao ano)",
+      "É um investimento seguro e conservador, e é utilizado principalmente para estratégias de médio e longo prazo"
+    ]
+  },
+  {
+    "termo": "Tesouro Prefixado",
+    "inicial": "T",
+    "conteudo": [
+      "É um título de dívida emitido pelo governo",
+      "Paga uma taxa de juros que já está pré-definida na hora da compra, sendo assim, o investidor sabe quanto o investimento irá render se mantiver até a data do resgate",
+      "É considerado o título mais conservador de todos"
+    ]
+  },
+  {
+    "termo": "Tesouro SELIC",
+    "inicial": "T",
+    "conteudo": [
+      "É um título de dívida emitido pelo governo",
+      "Ou seja, você empresta dinheiro para o governo e recebe juros por isso",
+      "Sua rentabilidade é indexada à taxa SELIC (Taxa básica de juros)",
+      "O tesouro SELIC tem uma grande liquidez e pode ser usado como reserva de emergência do investidor, sendo assim, um investimento de perfil conservador"
+    ]
+  },
+  {
+    "termo": "Ticker",
+    "inicial": "T",
+    "conteudo": [
+      "É o código do ativo a ser negociado",
+      "Composto por 4 letras e 2 números"
+    ]
+  },
+  {
+    "termo": "Vacância",
+    "inicial": "V",
+    "conteudo": [
+      "Mede a taxa de desocupação do empreendimento",
+      "Pode ser física (% da área não alugada) ou financeira (% da receita não contratada)"
+    ]
+  },
+  {
+    "termo": "Valor intrínseco",
+    "inicial": "V",
+    "conteudo": [
+      "O valor intrínseco pode ser entendido como o preço justo de uma ação",
+      "Em outras palavras, uma ação pode estar sendo cotada a um preço e ter um valor intrínseco diferente",
+      "Isso porque essa metodologia se concentra no Valuation, ou seja, no que a empresa vale e não no quanto a ação está sendo negociada"
+    ]
+  },
+  {
+    "termo": "Valuation",
+    "inicial": "V",
+    "conteudo": [
+      "É o cálculo do valor justo para aquele negócio, identificando oportunidades no mercado quando o preço da ação e diferente do valor dela",
+      "Existem vários métodos diferentes de ser realizar um Valuation, com os mais conhecidos sendo o por Múltiplos e por FCD (Fluxo de Caixa Descontado)",
+      "É essencial que o investidor tenha noção do valor justo de seus ativos em carteira para ser bem-sucedido nos investimentos"
+    ]
+  },
+  {
+    "termo": "Value Investing",
+    "inicial": "V",
+    "conteudo": [
+      "Value Investing é uma modalidade de investimentos na qual o investidor busca ações subvalorizadas no mercado",
+      "Além disso, também se refere ao tipo de investimentos que releva a subida e descida das ações no curto prazo, e pensa no valor intrínseco da empresa, além de sua possibilidade de expansão no mercado (pensando na sua valorização futura)"
+    ]
+  },
+  {
+    "termo": "Vencimento",
+    "inicial": "V",
+    "conteudo": [
+      "É o tempo até seu investimento pagar a rentabilidade contratada",
+      "Exemplos: Um CDB contratado em 2020 com vencimento em 2 anos, poderá ser resgatado em 2022 com a rentabilidade contratada no momento da compra",
+      "Um Tesouro IPCA+ 2050 tem vencimento em 2050"
+    ]
+  },
+  {
+    "termo": "Volatilidade",
+    "inicial": "V",
+    "conteudo": [
+      "É a variação da cotação de um determinado ativo em um período de tempo"
+    ]
+  },
+  {
+    "termo": "Wall Street",
+    "inicial": "W",
+    "conteudo": [
+      "A Wall Street é uma rua que corre na Manhattan Inferior, e é considerada o coração histórico do atual Distrito Financeiro da cidade de Nova Iorque, onde se localiza a bolsa de valores de Nova Iorque"
+    ]
+  }
+]
