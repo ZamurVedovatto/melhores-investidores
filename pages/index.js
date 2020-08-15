@@ -7,7 +7,6 @@ const HomeComponent = dynamic(() => import("./home"));
 export async function getStaticProps() {
   const data = await fetch("http://localhost:3000/api/posts");
   const posts = await data.json();
-
   return {
     props: {
       posts,
