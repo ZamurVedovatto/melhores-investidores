@@ -7,6 +7,7 @@ const PostHashs = (props) => {
     <div className="tag-cat">
       <ul className="single_post_tag_layout">
         {
+          hashtags &&
           hashtags.map((hashtag) => (
             <li key={hashtag}>
               <Link href={`/dicionario-do-investidor?term=${hashtag}`}>

@@ -7,9 +7,14 @@ const PostSidebar = (props) => {
 
   return (
     <>
-      {/* <PostSidebarSocialMedia /> */}
+    {
+      posts &&
       <PostSidebarCategories posts={posts} />
+    }
+    {
+      posts &&
       <PostSidebarPosts posts={posts.reverse().slice(0,4)} />
+    }
     </>
   )
 }

@@ -5,11 +5,16 @@ const PostTopInfo = (props) => {
 
   return (
     <div className="jl_single_style1">
+    {
+      post &&
       <div className="single_content_header jl_single_feature_above">
         <div className="image-post-thumb jlsingle-title-above">
           <img width="1000" height="667" src={post.images[0]} className="attachment-disto_justify_feature size-disto_justify_feature wp-post-image" alt="" />
         </div>
       </div>
+    }
+    {
+      post &&
       <div className="single_post_entry_content single_bellow_left_align">
         <span className="meta-category-small single_meta_category">
           {post.categories.map((category) => (
@@ -27,6 +32,7 @@ const PostTopInfo = (props) => {
           <span className="post-date updated"><i className="fa fa-clock-o"></i>{post.date}</span>
         </span>
       </div>
+    }
     </div>
   )
 }

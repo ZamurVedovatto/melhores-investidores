@@ -2,16 +2,22 @@ import Link from "next/Link";
 
 const ArticleRecentCard = (props) => {
   const { post } = props;
-
+  
   return (
     <li>
-      <Link href={post.url} >
+      {
+        post &&
+        <Link href={post.url} >
         <a className="jl_small_format feature-image-link image_post featured-thumbnail" title={post.title}>
           <img width="120" height="120" src={post.images[0]} className="attachment-disto_small_feature size-disto_small_feature wp-post-image" alt={post.title} />
           <div className="background_over_image"></div>
         </a>
       </Link>
-      <div className="item-details">
+      }
+
+      {
+        post &&
+        <div className="item-details">
         <span className="meta-category-small">
           {
             post.categories && post.categories.map(category => 
@@ -30,6 +36,8 @@ const ArticleRecentCard = (props) => {
           <span className="post-date"><i className="fa fa-clock-o"></i>{post.date}</span>
         </span>
       </div>
+      }
+
     </li>
   )
 }

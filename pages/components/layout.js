@@ -57,6 +57,11 @@ const Layout = (props) => {
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
 
+        <script data-ad-client="ca-pub-3961120270072973" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171618941-1"></script>
+        <script src="/js/ganalytics.js"></script>
+
         <title>Melhores Investidores</title>
       </Head>
       <section className="mobile_nav_class jl-has-sidebar">
