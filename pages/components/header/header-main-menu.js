@@ -46,6 +46,14 @@ const HeaderMainMenu = () => {
                     </a>
                   </li>
                 </Link>
+                <Link href="/wallet">
+                  <li className="menu-item">
+                    <a>
+                      Minha Carteira
+                      <span className="border-menu"></span>
+                    </a>
+                  </li>
+                </Link>
                 {/* <li className="menu-item menu-item-has-children"> <a href="shop.html">Para Aprender<span className="border-menu"></span></a>
                   <ul className="sub-menu">
                     <li className="menu-item"><a href="#">Biografias<span className="border-menu"></span></a>

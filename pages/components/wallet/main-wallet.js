@@ -5,6 +5,7 @@ import { useState } from "react";
 const MainHeadComponent = dynamic(() => import("./../main-head"));
 
 import AtivosMain from "./ativos-main";
+import CarteiraMain from "./carteira-main";
 import DashboardMain from "./dashboard-main";
 
 const MainWallet = (props) => {
@@ -63,7 +64,7 @@ const MainWallet = (props) => {
               case "dashboard":
                 return <DashboardMain />;
               case "carteira":
-                return <div>carteira</div>;
+                return <CarteiraMain />;
               default:
                 return <AtivosMain />;
             }
