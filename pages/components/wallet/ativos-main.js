@@ -1,18 +1,14 @@
 import AtivoCard from "./ativo-card";
 
 const AtivosMain = (props) => {
+  const { stocks } = props;
   return (
     <div className="ativos-main-wrapper" style={{ margin: "1rem 2rem" }}>
       <div
         className="uk-child-width-1-1@s uk-child-width-1-4@m uk-child-width-1-5@l uk-grid-small uk-grid-match uk-text-center"
         uk-grid="true"
       >
-        <AtivoCard stock={"ITSA4"} />
-        <AtivoCard stock={"BBDC4"} />
-        {/* <AtivoCard stock={"SAPR4"} />
-        <AtivoCard stock={"MYPK3"} />
-        <AtivoCard stock={"IRDM11"} />
-        <AtivoCard stock={"VINO11"} /> */}
+        {stocks && stocks.map((stock) => <AtivoCard stock={stock} />)}
 
         <div>
           <div className="uk-card uk-card-default uk-card-body">

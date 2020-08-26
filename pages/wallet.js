@@ -3,18 +3,7 @@ const MainWallet = dynamic(() => import("./components/wallet/main-wallet"));
 const API_KEY = "CGS6AIUGH79BZT5V";
 
 export async function getStaticProps() {
-  // const stocks = [
-  //   "ITSA4.SAO",
-  //   "BBDC4.SAO",
-  //   "SAPR4.SAO",
-  //   "MYPK3.SAO",
-  //   "IRDM11.SAO",
-  //   "VINO11.SAO",
-  // ];
-
-  const data = await fetch(
-    `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=ITSA4.SAO&apikey=${API_KEY}`
-  );
+  const data = await fetch(`http://localhost:8000/stocks`);
   console.log("data", data);
   const stocks = await data.json();
   console.log("stocks", stocks);
@@ -30,7 +19,7 @@ const Wallet = (props) => {
   return (
     <section>
       <div>
-        <MainWallet />
+        <MainWallet stocks={stocks} />
       </div>
     </section>
   );

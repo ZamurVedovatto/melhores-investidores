@@ -9,6 +9,7 @@ import CarteiraMain from "./carteira-main";
 import DashboardMain from "./dashboard-main";
 
 const MainWallet = (props) => {
+  const { stocks } = props;
   const [page, setPage] = useState("dashboard");
 
   const onChangePage = (page) => {
@@ -66,7 +67,7 @@ const MainWallet = (props) => {
               case "carteira":
                 return <CarteiraMain />;
               default:
-                return <AtivosMain />;
+                return <AtivosMain stocks={stocks} />;
             }
           })()}
         </div>
