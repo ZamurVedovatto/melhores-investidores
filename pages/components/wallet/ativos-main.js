@@ -5,17 +5,11 @@ const AtivosMain = (props) => {
   return (
     <div className="ativos-main-wrapper" style={{ margin: "1rem 2rem" }}>
       <div
-        className="uk-child-width-1-1@s uk-child-width-1-4@m uk-child-width-1-5@l uk-grid-small uk-grid-match uk-text-center"
+        className="uk-child-width-1-1@s uk-child-width-1-4@m uk-child-width-1-6@l uk-text-center"
         uk-grid="true"
       >
-        {stocks && stocks.map((stock) => <AtivoCard stock={stock} />)}
-
-        <div>
-          <div className="uk-card uk-card-default uk-card-body">
-            <h3 className="uk-card-title">Novo Ativo</h3>
-            <a href="" uk-icon="icon: plus-circle; ratio: 2"></a>
-          </div>
-        </div>
+        {stocks &&
+          stocks.map((stock) => <AtivoCard key={stock.code} stock={stock} />)}
       </div>
 
       <div id="offcanvas-aporte" uk-offcanvas="overlay: true">
