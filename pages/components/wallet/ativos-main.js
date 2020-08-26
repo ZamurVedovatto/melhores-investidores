@@ -3,7 +3,10 @@ import AtivoCard from "./ativo-card";
 const AtivosMain = (props) => {
   const { stocks } = props;
   return (
-    <div className="ativos-main-wrapper" style={{ margin: "1rem 2rem" }}>
+    <div
+      className="ativos-main-wrapper"
+      style={{ maxWidth: "1240px", margin: "1rem auto" }}
+    >
       <div
         className="uk-child-width-1-1@s uk-child-width-1-4@m uk-child-width-1-6@l uk-text-center"
         uk-grid="true"
