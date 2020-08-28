@@ -7,6 +7,7 @@ const MainHeadComponent = dynamic(() => import("./../main-head"));
 import AtivosMain from "./ativos-main";
 import CarteiraMain from "./carteira-main";
 import DashboardMain from "./dashboard-main";
+import ModalAddActiveComponent from "./modal-add-active";
 
 const MainWallet = (props) => {
   const { stocks } = props;
@@ -14,6 +15,10 @@ const MainWallet = (props) => {
 
   const onChangePage = (page) => {
     setPage(page);
+  };
+
+  const onOpenModalAddActive = () => {
+    UIkit.modal("#modal-center").show();
   };
 
   return (
@@ -59,6 +64,27 @@ const MainWallet = (props) => {
             </div>
           </nav>
         </div>
+        <div
+          className="wallet-info"
+          style={{
+            maxWidth: "1240px",
+            margin: "1rem auto",
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+          }}
+        >
+          <span style={{ fontSize: "2rem", marginRight: "2rem" }}>
+            Meus Ativos
+          </span>
+          <a
+            className="uk-button"
+            onClick={(e) => onOpenModalAddActive(e)}
+            uk-toggle
+            uk-icon="icon: plus-circle; ratio: 1.6"
+          ></a>
+        </div>
+        <ModalAddActiveComponent />
         <div className="wallet-content">
           {(() => {
             switch (page) {

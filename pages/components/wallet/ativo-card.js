@@ -7,7 +7,6 @@ const AtivoCard = (props) => {
 
   const setStockVariation = (change) => {
     let variation = change;
-    console.log(variation);
     if (change > 0) {
       return <span uk-icon="icon: triangle-up">{variation}%</span>;
     } else {

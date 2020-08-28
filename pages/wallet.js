@@ -3,7 +3,7 @@ const MainWallet = dynamic(() => import("./components/wallet/main-wallet"));
 const API_KEY = "CGS6AIUGH79BZT5V";
 
 export async function getStaticProps() {
-  const data = await fetch(`http://localhost:8000/stocks`);
+  const data = await fetch(`http://localhost:8000/active`);
   const stocks = await data.json();
   return {
     props: {
