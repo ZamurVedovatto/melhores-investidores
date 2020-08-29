@@ -1,139 +1,88 @@
-import AtivoCard from "./ativo-card";
+import AtivoCardWallet from "./ativo-card-wallet";
+import AtivoCardList from "./ativo-card-list";
+
+import { useEffect, useState } from "react";
+import OffcanvasAporte from "./offcanvas-aporte";
+import OffcanvasVenda from "./offcanvas-venda";
+import OffcanvasHistorico from "./offcanvas-historico";
 
 const AtivosMain = (props) => {
   const { stocks } = props;
+
+  const [wallet, setWallet] = useState([
+    {
+      change: "0,00",
+      code: "ABEV3",
+      price: "12,75",
+      quotas: "24",
+      totalValue: "1.250,30",
+    },
+    {
+      change: "0,37",
+      code: "BBDC3",
+      price: "19,93",
+      quotas: "150",
+      totalValue: "14.561,12",
+    },
+  ]);
+  const [selectedActive, setSelectedActive] = useState({});
+
   return (
     <div
       className="ativos-main-wrapper"
       style={{ maxWidth: "1240px", margin: "1rem auto" }}
     >
       <div
-        className="uk-child-width-1-1@s uk-child-width-1-4@m uk-child-width-1-6@l uk-text-center"
-        uk-grid="true"
+        className="meus-ativos uk-card uk-card-default uk-card-body"
+        style={{ marginBottom: "1rem" }}
       >
-        {stocks &&
-          stocks.map((stock) => <AtivoCard key={stock.code} stock={stock} />)}
-      </div>
-
-      <div id="offcanvas-aporte" uk-offcanvas="overlay: true">
-        <div className="uk-offcanvas-bar">
-          <button
-            className="uk-offcanvas-close"
-            type="button"
-            uk-close="true"
-          ></button>
-
-          <h3>BRSR6</h3>
-
-          <form>
-            <fieldset className="uk-fieldset">
-              <legend className="uk-legend">Novo Aporte</legend>
-              <div className="uk-margin">
-                <input className="uk-input" type="date" placeholder="Data" />
-              </div>
-              <div className="uk-margin">
-                <input
-                  className="uk-input"
-                  type="text"
-                  placeholder="Quantidade de Cotas"
-                />
-              </div>
-              <div className="uk-margin">
-                <input className="uk-input" type="text" placeholder="Preço" />
-              </div>
-              <div className="uk-margin">
-                <input
-                  className="uk-input"
-                  type="text"
-                  placeholder="Corretagem + Taxas"
-                />
-              </div>
-            </fieldset>
-            <button className="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">
-              Salvar
-            </button>
-          </form>
+        <h3 className="uk-card-title">Meus Ativos</h3>
+        <div
+          className="uk-card-body uk-accordion-content uk-child-width-1-1@s uk-child-width-1-4@m uk-child-width-1-4@l uk-text-center"
+          uk-grid="true"
+        >
+          {wallet &&
+            wallet.map((active) => (
+              <AtivoCardWallet key={active.code} active={active} />
+            ))}
         </div>
       </div>
-
-      <div id="offcanvas-venda" uk-offcanvas="overlay: true">
-        <div className="uk-offcanvas-bar">
-          <button
-            className="uk-offcanvas-close"
-            type="button"
-            uk-close="true"
-          ></button>
-
-          <h3>BRSR6</h3>
-
-          <form>
-            <fieldset className="uk-fieldset">
-              <legend className="uk-legend">Nova Venda</legend>
-              <div className="uk-margin">
-                <input className="uk-input" type="date" placeholder="Data" />
-              </div>
-              <div className="uk-margin">
-                <input
-                  className="uk-input"
-                  type="text"
-                  placeholder="Quantidade de Cotas"
-                />
-              </div>
-              <div className="uk-margin">
-                <input className="uk-input" type="text" placeholder="Preço" />
-              </div>
-              <div className="uk-margin">
-                <input
-                  className="uk-input"
-                  type="text"
-                  placeholder="Corretagem + Taxas"
-                />
-              </div>
-            </fieldset>
-            <button className="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">
-              Salvar
-            </button>
-          </form>
-        </div>
+      <div className="lista-ativos uk-card uk-card-default uk-card-body">
+        <ul uk-accordion="multiple: true">
+          <li className="uk-open">
+            <a className="uk-accordion-title" href="#">
+              Adicionar Ativo
+            </a>
+            <div
+              className="uk-card-body uk-accordion-content uk-child-width-1-1@s uk-child-width-1-4@m uk-child-width-1-6@l uk-text-center"
+              uk-grid="true"
+            >
+              <nav className="uk-navbar-container" uk-navbar="true">
+                <div className="uk-navbar-left">
+                  <div className="uk-navbar-item">
+                    <form className="uk-search uk-search-navbar">
+                      <span uk-search-icon="true"></span>
+                      <input
+                        className="uk-search-input"
+                        type="search"
+                        placeholder="Buscar..."
+                      />
+                    </form>
+                  </div>
+                </div>
+              </nav>
+              {stocks &&
+                stocks.map((stock) => (
+                  <AtivoCardList key={stock.code} stock={stock} />
+                ))}
+            </div>
+          </li>
+        </ul>
       </div>
 
-      <div id="offcanvas-historico" uk-offcanvas="overlay: true">
-        <div className="uk-offcanvas-bar">
-          <button
-            className="uk-offcanvas-close"
-            type="button"
-            uk-close="true"
-          ></button>
-
-          <h3>BRSR6</h3>
-
-          <form>
-            <fieldset className="uk-fieldset">
-              <legend className="uk-legend">Histórico de transações</legend>
-              <div className="uk-margin">
-                <input className="uk-input" type="date" placeholder="Data" />
-              </div>
-              <div className="uk-margin">
-                <input
-                  className="uk-input"
-                  type="text"
-                  placeholder="Quantidade de Cotas"
-                />
-              </div>
-              <div className="uk-margin">
-                <input className="uk-input" type="text" placeholder="Preço" />
-              </div>
-              <div className="uk-margin">
-                <input
-                  className="uk-input"
-                  type="text"
-                  placeholder="Corretagem + Taxas"
-                />
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </div>
+      <OffcanvasAporte active={selectedActive} />
+      <OffcanvasVenda active={selectedActive} />
+      <OffcanvasHistorico active={selectedActive} />
     </div>
   );
 };
