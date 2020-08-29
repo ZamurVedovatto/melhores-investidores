@@ -1,6 +1,8 @@
 import { Pie } from "react-chartjs-2";
 
 const DashboardMain = (props) => {
+  const { user } = props;
+
   const state = {
     labels: ["Ações", "FIIs", "Renda Fixa", "Reserva de Oportunidade"],
     datasets: [
@@ -13,6 +15,9 @@ const DashboardMain = (props) => {
 
   return (
     <div className="dashboard-wrapper">
+      <div className="uk-card">
+        <span>Seja bem vindo, {user.username}</span>
+      </div>
       <table className="uk-table uk-table-divider">
         <thead>
           <tr>

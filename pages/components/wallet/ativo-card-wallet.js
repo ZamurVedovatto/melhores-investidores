@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const AtivoCard = (props) => {
   const { active } = props;
 
@@ -7,6 +9,21 @@ const AtivoCard = (props) => {
 
   const onAddSell = (active) => {
     console.log(active);
+  };
+
+  const onRemoveActive = (active) => {
+    let removedActive = active;
+
+    axios
+      .put(
+        `http://localhost:8000/user/5f4a9e5d7c89ead7c4c61b52/remove-active`,
+        {
+          removedActive,
+        }
+      )
+      .then((res) => {
+        console.log(res);
+      });
   };
 
   return (
@@ -42,7 +59,6 @@ const AtivoCard = (props) => {
             onClick={(e) => onAddContribution(active)}
             uk-toggle="target: #offcanvas-aporte"
             className="uk-button uk-button-text"
-            style={{ marginBottom: ".5rem" }}
           >
             Aporte
           </a>
@@ -50,8 +66,15 @@ const AtivoCard = (props) => {
             onClick={(e) => onAddSell(active)}
             uk-toggle="target: #offcanvas-aporte"
             className="uk-button uk-button-text"
+            style={{ margin: ".5rem 0" }}
           >
             Venda
+          </a>
+          <a
+            onClick={(e) => onRemoveActive(active)}
+            className="uk-button uk-button-text"
+          >
+            Remover Ativo
           </a>
         </div>
       </div>

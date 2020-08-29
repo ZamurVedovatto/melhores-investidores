@@ -1,15 +1,13 @@
 import dynamic from "next/dynamic";
-import MainNav from "./main-nav";
 import { useState } from "react";
 
 const MainHeadComponent = dynamic(() => import("./../main-head"));
-
 import AtivosMain from "./ativos-main";
 import CarteiraMain from "./carteira-main";
 import DashboardMain from "./dashboard-main";
 
 const MainWallet = (props) => {
-  const { stocks } = props;
+  const { user, stocks } = props;
   const [page, setPage] = useState("dashboard");
 
   const onChangePage = (page) => {
@@ -74,11 +72,11 @@ const MainWallet = (props) => {
           {(() => {
             switch (page) {
               case "dashboard":
-                return <DashboardMain />;
+                return <DashboardMain user={user} />;
               case "carteira":
                 return <CarteiraMain />;
               default:
-                return <AtivosMain stocks={stocks} />;
+                return <AtivosMain user={user} stocks={stocks} />;
             }
           })()}
         </div>

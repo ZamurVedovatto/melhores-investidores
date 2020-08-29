@@ -7,24 +7,7 @@ import OffcanvasVenda from "./offcanvas-venda";
 import OffcanvasHistorico from "./offcanvas-historico";
 
 const AtivosMain = (props) => {
-  const { stocks } = props;
-
-  const [wallet, setWallet] = useState([
-    {
-      change: "0,00",
-      code: "ABEV3",
-      price: "12,75",
-      quotas: "24",
-      totalValue: "1.250,30",
-    },
-    {
-      change: "0,37",
-      code: "BBDC3",
-      price: "19,93",
-      quotas: "150",
-      totalValue: "14.561,12",
-    },
-  ]);
+  const { user, stocks } = props;
   const [selectedActive, setSelectedActive] = useState({});
 
   return (
@@ -41,8 +24,9 @@ const AtivosMain = (props) => {
           className="uk-card-body uk-accordion-content uk-child-width-1-1@s uk-child-width-1-4@m uk-child-width-1-4@l uk-text-center"
           uk-grid="true"
         >
-          {wallet &&
-            wallet.map((active) => (
+          {user &&
+            user.actives &&
+            user.actives.map((active) => (
               <AtivoCardWallet key={active.code} active={active} />
             ))}
         </div>
@@ -73,7 +57,11 @@ const AtivosMain = (props) => {
               </nav>
               {stocks &&
                 stocks.map((stock) => (
-                  <AtivoCardList key={stock.code} stock={stock} />
+                  <AtivoCardList
+                    key={stock.code}
+                    stock={stock}
+                    selectedActive={selectedActive}
+                  />
                 ))}
             </div>
           </li>

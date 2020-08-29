@@ -1,14 +1,27 @@
+import axios from "axios";
+
 const AtivoCardList = (props) => {
   const { stock } = props;
 
-  const onAddActive = (active) => {
-    console.log(active);
+  const onClickAddAtivo = () => {
+    console.log(stock);
+
+    let newActive = { code: stock.code };
+
+    axios
+      .put(`http://localhost:8000/user/5f4a9e5d7c89ead7c4c61b52/add-active`, {
+        newActive,
+      })
+      .then((res) => {
+        console.log(res);
+        console.log(res.data);
+      });
   };
 
   return (
     <div
-      onClick={(e) => onAddActive(stock)}
       style={{ paddingLeft: ".5rem", marginTop: ".5rem" }}
+      onClick={(e) => onClickAddAtivo()}
     >
       <div className="uk-card uk-card-default uk-card-small uk-card-hover uk-card-body">
         <h3 className="uk-card-title">{stock.code}</h3>
