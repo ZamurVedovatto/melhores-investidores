@@ -3,12 +3,9 @@ import axios from "axios";
 const AtivoCardList = (props) => {
   const { stock } = props;
 
-  const onClickAddAtivo = () => {
-    console.log(stock);
-
+  const onClickAddAtivo = async () => {
     let newActive = { code: stock.code };
-
-    axios
+    await axios
       .put(`http://localhost:8000/user/5f4a9e5d7c89ead7c4c61b52/add-active`, {
         newActive,
       })
@@ -16,6 +13,11 @@ const AtivoCardList = (props) => {
         console.log(res);
         console.log(res.data);
       });
+    reloadUserData();
+  };
+
+  const reloadUserData = () => {
+    props.reloadUserData();
   };
 
   return (
