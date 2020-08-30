@@ -11,14 +11,14 @@ const AtivoCard = (props) => {
     console.log(active);
   };
 
-  const onRemoveActive = async (active) => {
-    let removedActive = active;
+  const onRemoveActive = async () => {
+    let selected = active;
 
     await axios
       .put(
         `http://localhost:8000/user/5f4a9e5d7c89ead7c4c61b52/remove-active`,
         {
-          removedActive,
+          selected,
         }
       )
       .then((res) => {
@@ -75,7 +75,7 @@ const AtivoCard = (props) => {
             Venda
           </a>
           <a
-            onClick={(e) => onRemoveActive(active)}
+            onClick={(e) => onRemoveActive()}
             className="uk-button uk-button-text"
           >
             Remover Ativo
