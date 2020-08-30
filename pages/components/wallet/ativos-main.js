@@ -1,18 +1,47 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 import AtivoCardWallet from "./ativo-card-wallet";
 import AtivoCardList from "./ativo-card-list";
-
-import { useEffect, useState } from "react";
 import OffcanvasAporte from "./offcanvas-aporte";
 import OffcanvasVenda from "./offcanvas-venda";
 import OffcanvasHistorico from "./offcanvas-historico";
+import OffcanvasAddAtivo from "./offcanvas-add-ativo";
 
 const AtivosMain = (props) => {
-  console.log(props);
-
   const { user, stocks } = props;
+  const [selected, setSelected] = useState({});
 
   const reloadUserData = () => {
     props.getUserData();
+  };
+
+  const onChangeDivision = (e) => {
+    let division = e.target.value;
+    setSelected({ ...selected, division });
+  };
+
+  const onChangeSector = (e) => {
+    let sector = e.target.value;
+    setSelected({ ...selected, sector });
+  };
+
+  const onAddAtivo = async () => {
+    console.log(selected);
+
+    await axios
+      .put(`http://localhost:8000/user/5f4a9e5d7c89ead7c4c61b52/add-active`, {
+        selected,
+      })
+      .then((res) => {
+        reloadUserData();
+        UIkit.offcanvas("#offcanvas-add-ativo").hide();
+      });
+  };
+
+  const onSetNewActive = (active) => {
+    setSelected(active);
+    UIkit.offcanvas("#offcanvas-add-ativo").show();
   };
 
   return (
@@ -25,9 +54,6 @@ const AtivosMain = (props) => {
         style={{ marginBottom: "1rem" }}
       >
         <h3 className="uk-card-title">Meus Ativos</h3>
-        <a className="uk-button" onClick={() => reloadUserData()}>
-          reloadUserData
-        </a>
         <div
           className="uk-card-body uk-accordion-content uk-child-width-1-1@s uk-child-width-1-4@m uk-child-width-1-4@l uk-text-center"
           uk-grid="true"
@@ -35,7 +61,11 @@ const AtivosMain = (props) => {
           {user &&
             user.actives &&
             user.actives.map((active) => (
-              <AtivoCardWallet key={active.code} active={active} />
+              <AtivoCardWallet
+                key={active.code}
+                active={active}
+                reloadUserData={reloadUserData}
+              />
             ))}
         </div>
       </div>
@@ -71,6 +101,7 @@ const AtivosMain = (props) => {
                     key={stock.code}
                     stock={stock}
                     reloadUserData={reloadUserData}
+                    onSetNewActive={onSetNewActive}
                   />
                 ))}
             </div>
@@ -78,6 +109,12 @@ const AtivosMain = (props) => {
         </ul>
       </div>
 
+      <OffcanvasAddAtivo
+        selected={selected}
+        onAddAtivo={onAddAtivo}
+        onChangeSector={onChangeSector}
+        onChangeDivision={onChangeDivision}
+      />
       <OffcanvasAporte />
       <OffcanvasVenda />
       <OffcanvasHistorico />

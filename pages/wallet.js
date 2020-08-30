@@ -67,9 +67,7 @@ const Wallet = () => {
                     </a>
                   </li>
                   <li>
-                    <a onClick={(e) => onChangePage("projecoes")}>
-                      Projeções/Cálculos
-                    </a>
+                    <a onClick={(e) => onChangePage("simulador")}>Simulador</a>
                   </li>
                   <li>
                     <a onClick={(e) => onChangePage("perfil")}>Perfil</a>

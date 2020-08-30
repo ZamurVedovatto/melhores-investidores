@@ -11,10 +11,10 @@ const AtivoCard = (props) => {
     console.log(active);
   };
 
-  const onRemoveActive = (active) => {
+  const onRemoveActive = async (active) => {
     let removedActive = active;
 
-    axios
+    await axios
       .put(
         `http://localhost:8000/user/5f4a9e5d7c89ead7c4c61b52/remove-active`,
         {
@@ -22,8 +22,12 @@ const AtivoCard = (props) => {
         }
       )
       .then((res) => {
-        console.log(res);
+        reloadUserData();
       });
+  };
+
+  const reloadUserData = () => {
+    props.reloadUserData();
   };
 
   return (
