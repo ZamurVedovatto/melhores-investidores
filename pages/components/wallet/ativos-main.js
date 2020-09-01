@@ -27,8 +27,6 @@ const AtivosMain = (props) => {
   };
 
   const onAddAtivo = async () => {
-    console.log(selected);
-
     await axios
       .put(`http://localhost:8000/user/5f4a9e5d7c89ead7c4c61b52/add-active`, {
         selected,
@@ -39,9 +37,62 @@ const AtivosMain = (props) => {
       });
   };
 
+  const onUpdateUser = async (content) => {
+    await axios
+      .put(`http://localhost:8000/user/5f4a9e5d7c89ead7c4c61b52`, {
+        content,
+      })
+      .then((res) => {
+        reloadUserData();
+        UIkit.offcanvas("#offcanvas-aporte").hide();
+        UIkit.offcanvas("#offcanvas-venda").hide();
+      });
+  };
+
   const onSetNewActive = (active) => {
     setSelected(active);
     UIkit.offcanvas("#offcanvas-add-ativo").show();
+  };
+
+  const onOpenOffcanvasAporte = (active) => {
+    setSelected(active);
+    UIkit.offcanvas("#offcanvas-aporte").show();
+  };
+
+  const onAddContribution = (code, contribution) => {
+    user.actives.map((active) => {
+      if (active.code === code) {
+        let patrimony = contribution.quotas * contribution.price;
+        active.historic.push(contribution);
+        active.patrimony += patrimony;
+        active.quotas += contribution.quotas;
+        active.averagePrice =
+          (patrimony + contribution.brokerage) / contribution.quotas;
+        console.log(active, contribution);
+      }
+    });
+    onUpdateUser(user);
+  };
+
+  const onRemoveContribution = (code, contribution) => {
+    user.actives.map((active) => {
+      if (active.code === code) {
+        let patrimony =
+          contribution.quotas * contribution.price + contribution.brokerage;
+        active.historic.push(contribution);
+        active.patrimony -= patrimony;
+        active.quotas -= contribution.quotas;
+        active.averagePrice =
+          (patrimony + contribution.brokerage) / contribution.quotas; //corrigir
+        console.log(active, contribution);
+      }
+    });
+    onUpdateUser(user);
+  };
+
+  const onOpenOffcanvasVenda = (active) => {
+    setSelected(active);
+    UIkit.offcanvas("#offcanvas-venda").show();
   };
 
   return (
@@ -65,6 +116,8 @@ const AtivosMain = (props) => {
                 key={active.code}
                 active={active}
                 reloadUserData={reloadUserData}
+                onOpenOffcanvasAporte={onOpenOffcanvasAporte}
+                onOpenOffcanvasVenda={onOpenOffcanvasVenda}
               />
             ))}
         </div>
@@ -115,8 +168,14 @@ const AtivosMain = (props) => {
         onChangeSector={onChangeSector}
         onChangeDivision={onChangeDivision}
       />
-      <OffcanvasAporte />
-      <OffcanvasVenda />
+      <OffcanvasAporte
+        onAddContribution={onAddContribution}
+        selected={selected}
+      />
+      <OffcanvasVenda
+        onRemoveContribution={onRemoveContribution}
+        selected={selected}
+      />
       <OffcanvasHistorico />
     </div>
   );

@@ -3,17 +3,20 @@ import axios from "axios";
 const AtivoCard = (props) => {
   const { active } = props;
 
-  const onAddContribution = (active) => {
-    console.log(active);
+  const onOpenOffcanvasAporte = () => {
+    props.onOpenOffcanvasAporte(active);
   };
 
-  const onAddSell = (active) => {
+  const onOpenOffcanvasVenda = () => {
+    props.onOpenOffcanvasVenda(active);
+  };
+
+  const onAddSell = () => {
     console.log(active);
   };
 
   const onRemoveActive = async () => {
     let selected = active;
-
     await axios
       .put(
         `http://localhost:8000/user/5f4a9e5d7c89ead7c4c61b52/remove-active`,
@@ -42,7 +45,7 @@ const AtivoCard = (props) => {
           }}
         >
           <h3 className="uk-card-title">{active.code}</h3>
-          <span>Preço atual: R${active.price}</span>
+          <span>Nome da Empresa</span>
         </div>
         <div
           className="uk-card-body"
@@ -53,18 +56,26 @@ const AtivoCard = (props) => {
           }}
         >
           <span>Cotas: {active.quotas}</span>
-          <span>Patrimônio: R${active.totalValue}</span>
+          <span>Patrimônio: R${active.patrimony}</span>
         </div>
         <div
           className="uk-card-footer"
           style={{ display: "flex", flexDirection: "column" }}
         >
           <a
-            onClick={(e) => onAddContribution(active)}
+            onClick={(e) => onOpenOffcanvasAporte(active)}
             uk-toggle="target: #offcanvas-aporte"
             className="uk-button uk-button-text"
           >
             Aporte
+          </a>
+          <a
+            onClick={(e) => onOpenOffcanvasVenda(active)}
+            uk-toggle="target: #offcanvas-aporte"
+            className="uk-button uk-button-text"
+            style={{ margin: ".5rem 0" }}
+          >
+            Venda
           </a>
           <a
             onClick={(e) => onAddSell(active)}
@@ -72,8 +83,13 @@ const AtivoCard = (props) => {
             className="uk-button uk-button-text"
             style={{ margin: ".5rem 0" }}
           >
-            Venda
+            Histórico
           </a>
+        </div>
+        <div
+          className="uk-card-footer"
+          style={{ display: "flex", flexDirection: "column" }}
+        >
           <a
             onClick={(e) => onRemoveActive()}
             className="uk-button uk-button-text"

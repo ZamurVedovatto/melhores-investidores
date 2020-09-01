@@ -23,6 +23,7 @@ const Wallet = () => {
     await axios
       .get(`http://localhost:8000/user/5f4a9e5d7c89ead7c4c61b52`)
       .then((res) => {
+        console.log(res.data);
         setUser(res.data);
       });
   };

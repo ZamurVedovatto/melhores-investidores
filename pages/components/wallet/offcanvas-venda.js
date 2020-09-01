@@ -1,4 +1,23 @@
-const OffcanvasVenda = (active) => {
+import { useState } from "react";
+
+const OffcanvasVenda = (props) => {
+  const { selected } = props;
+  const [date, setDate] = useState(new Date());
+  const [quotas, setQuotas] = useState(0);
+  const [price, setPrice] = useState(0);
+  const [brokerage, setBrokerage] = useState(0);
+
+  const onRemoveAporte = () => {
+    let contribution = {
+      type: "venda",
+      date,
+      quotas: Number(quotas),
+      price: Number(price),
+      brokerage: Number(brokerage),
+    };
+    props.onRemoveContribution(selected.code, contribution);
+  };
+
   return (
     <div id="offcanvas-venda" uk-offcanvas="overlay: true">
       <div className="uk-offcanvas-bar">
@@ -8,35 +27,50 @@ const OffcanvasVenda = (active) => {
           uk-close="true"
         ></button>
 
-        <h3>BRSR6</h3>
+        <h3>{selected.code}</h3>
 
         <form>
           <fieldset className="uk-fieldset">
-            <legend className="uk-legend">Nova Venda</legend>
-            <div className="uk-margin">
-              <input className="uk-input" type="date" placeholder="Data" />
-            </div>
+            <legend className="uk-legend">Novo Aporte</legend>
             <div className="uk-margin">
               <input
                 className="uk-input"
-                type="text"
-                placeholder="Quantidade de Cotas"
+                type="date"
+                placeholder="Data"
+                onChange={(e) => setDate(e.target.value)}
               />
             </div>
             <div className="uk-margin">
-              <input className="uk-input" type="text" placeholder="Preço" />
+              <input
+                className="uk-input"
+                type="number"
+                placeholder="Quantidade de Cotas"
+                onChange={(e) => setQuotas(e.target.value)}
+              />
             </div>
             <div className="uk-margin">
               <input
                 className="uk-input"
-                type="text"
+                type="number"
+                placeholder="Preço"
+                onChange={(e) => setPrice(e.target.value)}
+              />
+            </div>
+            <div className="uk-margin">
+              <input
+                className="uk-input"
+                type="number"
                 placeholder="Corretagem + Taxas"
+                onChange={(e) => setBrokerage(e.target.value)}
               />
             </div>
           </fieldset>
-          <button className="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">
+          <a
+            className="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom"
+            onClick={(e) => onRemoveAporte()}
+          >
             Salvar
-          </button>
+          </a>
         </form>
       </div>
     </div>
