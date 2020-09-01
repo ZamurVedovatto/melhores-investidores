@@ -1,17 +1,20 @@
 import { Pie } from "react-chartjs-2";
+import { useState, useEffect } from "react";
 
 const DashboardMain = (props) => {
-  const { user } = props;
-
-  const state = {
-    labels: ["Ações", "FIIs", "Renda Fixa", "Reserva de Oportunidade"],
-    datasets: [
-      {
-        data: [45, 35, 10, 10],
-        backgroundColor: ["red", "blue", "green", "yellow"],
-      },
-    ],
-  };
+  const { info, user } = props;
+  const [chartData, setChartData] = useState(
+    {
+      labels: ["Ações", "FIIs", "Renda Fixa", "Reserva de Oportunidade"],
+      datasets: [
+        {
+          data: [45, 35, 10, 10],
+          backgroundColor: ["red", "blue", "green", "yellow"],
+        },
+      ],
+    },
+    []
+  );
 
   return (
     <div className="dashboard-wrapper">
@@ -28,19 +31,19 @@ const DashboardMain = (props) => {
         </thead>
         <tbody>
           <tr>
-            <td>279</td>
-            <td>R$ 5.016,34</td>
-            <td>-R$ 356,66 (-7,11%)</td>
+            <td>{info.quotas}</td>
+            <td>R$ {info.patrimony}</td>
+            <td>-R$ {info.lossProfits}</td>
           </tr>
         </tbody>
       </table>
 
       <Pie
         data={{
-          labels: state.labels,
-          datasets: state.datasets,
+          labels: chartData.labels,
+          datasets: chartData.datasets,
         }}
-        height="30vh"
+        height="50vh"
       />
     </div>
   );

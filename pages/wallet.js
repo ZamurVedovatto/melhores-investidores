@@ -9,6 +9,7 @@ import AtivosMain from "./components/wallet/ativos-main";
 const Wallet = () => {
   const [stocks, setStocks] = useState([]);
   const [user, setUser] = useState({});
+  const [info, setInfo] = useState({});
   const [page, setPage] = useState("dashboard");
 
   useEffect(() => {
@@ -25,6 +26,19 @@ const Wallet = () => {
       .then((res) => {
         console.log(res.data);
         setUser(res.data);
+
+        let newInfo = {
+          quotas: 0,
+          patrimony: 0,
+          lossProfits: 0,
+        };
+        res.data.actives.forEach((active) => {
+          newInfo.quotas += active.quotas;
+          newInfo.patrimony += active.patrimony;
+          newInfo.lossProfits = "fazer";
+        });
+
+        setInfo(newInfo);
       });
   };
 
@@ -97,7 +111,7 @@ const Wallet = () => {
             {(() => {
               switch (page) {
                 case "dashboard":
-                  return <DashboardMain user={user} />;
+                  return <DashboardMain user={user} info={info} />;
                 case "carteira":
                   return (
                     <CarteiraMain actives={user.actives} stocks={stocks} />

@@ -8,7 +8,7 @@ const CarteiraMain = (props) => {
     let newWallet = [];
 
     actives.map((active) => {
-      stocks.map((stock) => {
+      stocks.forEach((stock) => {
         if (active.code === stock.code) {
           console.log(active, stock);
           active.price = stock.price;

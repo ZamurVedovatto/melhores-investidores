@@ -127,7 +127,42 @@ const AtivosMain = (props) => {
           {/* <li className="uk-open"> */}
           <li>
             <a className="uk-accordion-title" href="#">
-              Adicionar Ativo
+              Adicionar Ação
+            </a>
+
+            <div
+              className="uk-card-body uk-accordion-content uk-child-width-1-1@s uk-child-width-1-4@m uk-child-width-1-6@l uk-text-center"
+              uk-grid="true"
+            >
+              <nav className="uk-navbar-container" uk-navbar="true">
+                <div className="uk-navbar-left">
+                  <div className="uk-navbar-item">
+                    <form className="uk-search uk-search-navbar">
+                      <span uk-search-icon="true"></span>
+                      <input
+                        className="uk-search-input"
+                        type="search"
+                        placeholder="Buscar..."
+                      />
+                    </form>
+                  </div>
+                </div>
+              </nav>
+              {stocks &&
+                stocks.map((stock) => (
+                  <AtivoCardList
+                    key={stock.code}
+                    stock={stock}
+                    reloadUserData={reloadUserData}
+                    onSetNewActive={onSetNewActive}
+                  />
+                ))}
+            </div>
+          </li>
+
+          <li style={{ marginTop: ".5rem" }}>
+            <a className="uk-accordion-title" href="#">
+              Adicionar FIIs
             </a>
 
             <div
