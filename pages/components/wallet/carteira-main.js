@@ -1,5 +1,24 @@
+import { useEffect, useState } from "react";
+
 const CarteiraMain = (props) => {
-  const { actives } = props;
+  const { actives, stocks } = props;
+  const [wallet, setWallet] = useState([]);
+
+  useEffect(() => {
+    let newWallet = [];
+
+    actives.map((active) => {
+      stocks.map((stock) => {
+        if (active.code === stock.code) {
+          console.log(active, stock);
+          active.price = stock.price;
+        }
+      });
+      newWallet.push[active];
+    });
+    console.log(newWallet);
+    setWallet(newWallet);
+  }, []);
 
   return (
     <>

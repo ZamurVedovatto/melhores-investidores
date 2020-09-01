@@ -99,7 +99,9 @@ const Wallet = () => {
                 case "dashboard":
                   return <DashboardMain user={user} />;
                 case "carteira":
-                  return <CarteiraMain actives={user.actives} />;
+                  return (
+                    <CarteiraMain actives={user.actives} stocks={stocks} />
+                  );
                 default:
                   return (
                     <AtivosMain
