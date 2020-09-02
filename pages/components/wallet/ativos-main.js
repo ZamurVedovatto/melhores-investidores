@@ -3,13 +3,15 @@ import axios from "axios";
 
 import AtivoCardWallet from "./ativo-card-wallet";
 import AtivoCardList from "./ativo-card-list";
+import FiiCardList from "./fii-card-list";
 import OffcanvasAporte from "./offcanvas-aporte";
 import OffcanvasVenda from "./offcanvas-venda";
 import OffcanvasHistorico from "./offcanvas-historico";
 import OffcanvasAddAtivo from "./offcanvas-add-ativo";
+import OffcanvasAddFii from "./offcanvas-add-fii";
 
 const AtivosMain = (props) => {
-  const { user, stocks } = props;
+  const { user, stocks, fiis } = props;
   const [selected, setSelected] = useState({});
 
   const reloadUserData = () => {
@@ -34,6 +36,7 @@ const AtivosMain = (props) => {
       .then((res) => {
         reloadUserData();
         UIkit.offcanvas("#offcanvas-add-ativo").hide();
+        UIkit.offcanvas("#offcanvas-add-fii").hide();
       });
   };
 
@@ -52,6 +55,11 @@ const AtivosMain = (props) => {
   const onSetNewActive = (active) => {
     setSelected(active);
     UIkit.offcanvas("#offcanvas-add-ativo").show();
+  };
+
+  const onSetNewFii = (active) => {
+    setSelected(active);
+    UIkit.offcanvas("#offcanvas-add-fii").show();
   };
 
   const onOpenOffcanvasAporte = (active) => {
@@ -183,13 +191,13 @@ const AtivosMain = (props) => {
                   </div>
                 </div>
               </nav>
-              {stocks &&
-                stocks.map((stock) => (
-                  <AtivoCardList
-                    key={stock.code}
-                    stock={stock}
+              {fiis &&
+                fiis.map((fii) => (
+                  <FiiCardList
+                    key={fii.code}
+                    fii={fii}
                     reloadUserData={reloadUserData}
-                    onSetNewActive={onSetNewActive}
+                    onSetNewFii={onSetNewFii}
                   />
                 ))}
             </div>
@@ -198,6 +206,12 @@ const AtivosMain = (props) => {
       </div>
 
       <OffcanvasAddAtivo
+        selected={selected}
+        onAddAtivo={onAddAtivo}
+        onChangeSector={onChangeSector}
+        onChangeDivision={onChangeDivision}
+      />
+      <OffcanvasAddFii
         selected={selected}
         onAddAtivo={onAddAtivo}
         onChangeSector={onChangeSector}

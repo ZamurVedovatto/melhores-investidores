@@ -8,12 +8,14 @@ const OffcanvasAporte = (props) => {
   const [brokerage, setBrokerage] = useState(0);
 
   const onAddAporte = () => {
+    let investiment = Number(quotas) * Number(price) + Number(brokerage);
     let contribution = {
       type: "aporte",
       date,
       quotas: Number(quotas),
       price: Number(price),
       brokerage: Number(brokerage),
+      investiment,
     };
     props.onAddContribution(selected.code, contribution);
   };
@@ -31,7 +33,7 @@ const OffcanvasAporte = (props) => {
 
         <form>
           <fieldset className="uk-fieldset">
-            <legend className="uk-legend">Novo Aporte</legend>
+            <legend className="uk-legend">Aporte</legend>
             <div className="uk-margin">
               <input
                 className="uk-input"

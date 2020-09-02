@@ -31,7 +31,7 @@ const OffcanvasVenda = (props) => {
 
         <form>
           <fieldset className="uk-fieldset">
-            <legend className="uk-legend">Novo Aporte</legend>
+            <legend className="uk-legend">Venda</legend>
             <div className="uk-margin">
               <input
                 className="uk-input"

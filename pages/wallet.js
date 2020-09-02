@@ -8,6 +8,7 @@ import AtivosMain from "./components/wallet/ativos-main";
 
 const Wallet = () => {
   const [stocks, setStocks] = useState([]);
+  const [fiis, setFiis] = useState([]);
   const [user, setUser] = useState({});
   const [info, setInfo] = useState({});
   const [page, setPage] = useState("dashboard");
@@ -18,6 +19,10 @@ const Wallet = () => {
 
   useEffect(() => {
     getActivesData();
+  }, []);
+
+  useEffect(() => {
+    getFiisData();
   }, []);
 
   const getUserData = async () => {
@@ -45,6 +50,12 @@ const Wallet = () => {
   const getActivesData = async () => {
     await axios.get(`http://localhost:8000/active`).then((res) => {
       setStocks(res.data);
+    });
+  };
+
+  const getFiisData = async () => {
+    await axios.get(`http://localhost:8000/fiis`).then((res) => {
+      setFiis(res.data);
     });
   };
 
@@ -114,7 +125,11 @@ const Wallet = () => {
                   return <DashboardMain user={user} info={info} />;
                 case "carteira":
                   return (
-                    <CarteiraMain actives={user.actives} stocks={stocks} />
+                    <CarteiraMain
+                      actives={user.actives}
+                      stocks={stocks}
+                      fiis={fiis}
+                    />
                   );
                 default:
                   return (
@@ -122,6 +137,7 @@ const Wallet = () => {
                       getUserData={getUserData}
                       user={user}
                       stocks={stocks}
+                      fiis={fiis}
                     />
                   );
               }
