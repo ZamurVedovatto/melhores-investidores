@@ -10,7 +10,7 @@ const PostAuthor = (props) => {
         </div>
         <div className="author-description">
           <h5><a href="post-layout-6.html#">{author}</a></h5>
-          <p>Analista de Sistemas, empresário e apaixonado por empreendedorismo, negócios e investimentos, o autor produz conteúdo com o intuito de atiçar a capacidade do leitor de produzir insights e conhecimento.</p>
+          <p>Analista de Sistemas, desenvolver, empresário e apaixonado por empreendedorismo, negócios e investimentos. O autor produz conteúdo com o intuito de atiçar o leitor a produzir insights e conhecimento.</p>
         </div>
       </div>
     </div>

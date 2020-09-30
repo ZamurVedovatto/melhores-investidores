@@ -66,14 +66,14 @@ const Post = (props) => {
                         Antes de mais nada, o que são as BDRs?
                       </p>
                       <p>
-                      BDR é a sigla em inglês (Brazilian Depositary Receipts) para os certificados que representam ações emitidas por empresas em outros países, tais como ações da Apple, Intel, Coca-Cola, Johnson & Johnson, Amazon, Netflix, etc.
+                      <a uk-tooltip={openDict("BDR’s")} className={`${artigoStyles.dictLink}`}>BDR</a> é a sigla em inglês (Brazilian Depositary Receipts) para os certificados que representam <a uk-tooltip={openDict("ação")} className={`${artigoStyles.dictLink}`}>ações</a> emitidas por empresas em outros países, tais como as ações da Apple, Intel, Coca-Cola, Johnson & Johnson, Amazon, Netflix, etc.
                       </p>
 
                       <p>
-                      Através das BDRs, o investidor pode negociar estes papéis diretamente na bolsa brasileira, assim como é feito com qualquer ação listada no BOVESPA, tais como ações da Vale, Banco do Brasil, Weg, ITAÚSA, Magazine Luiza, entre outras.
+                      Através das BDRs, o investidor pode negociar estes papéis diretamente na bolsa brasileira, assim como ele faria com ações listadas no BOVESPA como Vale (VALE3) , Banco do Brasil (BBAS3), Weg (WEGE3), ITAÚSA (ITSA4), Magazine Luiza (MGLU3), entre outras.
                       </p>
                       <p>
-                      A palavrinha certificado que causa um pouco de dúvida. Simplificando, podemos dizer que ao investir em uma BDR, você não está comprando diretamente as ações de empresas no exterior, mas sim títulos representativos desses papéis. Estas ações existem e ficam em custódia em uma instituição financeira.
+                      A palavrinha certificado citada acima causa um pouco de dúvida. Simplificando, podemos dizer que ao investir em uma BDR, você não está comprando diretamente as ações de empresas no exterior, mas sim títulos representativos desses papéis (o tal certificado). Estas ações existem e ficam em custódia em uma instituição financeira.
                       </p>
 
                       <p>
@@ -84,14 +84,8 @@ const Post = (props) => {
                           width="338"
                           height="423"
                         />
-                        Devido ao fato de ser um certificado e não o papel da ação em si, o investidor deve considerar a volatilidade deste papel antes de investir em qualquer BDR. Em síntese, quanto maior a volatilidade, melhor para o investidor pois, assim que ele resolver negociar, seja compra ou venda, certamente encontrará alguém do outro lado querendo comprar ou vender.
+                        Devido ao fato de ser um certificado e não o papel da ação em si, o investidor deve considerar a <a uk-tooltip={openDict("liquidez")} className={`${artigoStyles.dictLink}`}>liquidez</a> deste papel antes de investir em qualquer BDR. Em síntese, quanto maior a liquidez, melhor para o investidor pois, assim que ele resolver negociar, seja compra ou venda, certamente encontrará alguém do outro lado querendo comprar ou vender. Um outro fator é a <a uk-tooltip={openDict("volatilidade")} className={`${artigoStyles.dictLink}`}>volatilidade</a> que as BDRs estão sujeitas, assim como qualquer outro investimento em <a uk-tooltip={openDict("renda variável")} className={`${artigoStyles.dictLink}`}>renda variável</a>.
                       </p>
-
-                      <blockquote>
-                        <p>
-                        O investimento em ações brasileiras é uma oportunidade é melhor por que as peripécias de mercado elas se transformam com tanta velocidade que essa transformação acaba gerando um clima de oportunidade mais intenso que lá fora, que são economias mais estáveis
-                        </p>
-                      </blockquote>
 
                       
                       <p className={`${artigoStyles.subtitle}`}>
@@ -99,12 +93,18 @@ const Post = (props) => {
                       </p>
 
                       <p>
-                      Avesso às BDRs e ao investimento no mercados estrangeiros, um dos maiores investidores brasileiros, o Luiz Barsi, considera que o mercado brasileiro está repleto de boas oportunidades, como podemos subtrair da seguinte passagem dita por ele: “a oportunidade é melhor por que as peripécias de mercado elas se transformam com tanta velocidade que essa transformação acaba gerando um clima de oportunidade mais intenso que lá fora, que são economias mais estáveis”.
+                      Avesso às BDRs e ao <a uk-tooltip={openDict("investimento")} className={`${artigoStyles.dictLink}`}>investimento</a> em mercados estrangeiros, um dos maiores investidores brasileiros, o Luiz Barsi, considera que o mercado brasileiro está repleto de boas oportunidades, como podemos subtrair da seguinte passagem dita por ele quando perguntado sobre o investimento em ações estrangeiras: "a oportunidade (do investimento no Brasil) é melhor por que as peripécias de mercado se transformam com tanta velocidade que acaba-se gerando um clima de oportunidade mais intenso do que lá fora, onde as economias já mais estáveis".
                       </p>
 
                       <p>
-                      Um outro fator interessante, e até recente, é a oportunidade que novas corretoras estão dando aos brasileiros de se investir diretamente em ações de outros mercados. Um exemplo é a Avenue Securities (https://www.avenue.us/). A criação de uma conta na Avenue e o envio de valores é tão simples como em corretoras nacionais (Rico, Clear, XP, Banco Inter, etc), assim como as operações de compra e venda. Além disto, a Avenue oferece corretagem gratuita para até 10 operações por mês. Desta forma, o investidor, ao invés de comprar certificados, adquire diretamente os papéis das empresas.
+                      Um outro fator interessante é a oportunidade que corretoras estão oferecendo aos brasileiros de se investir diretamente em ações de outros mercados. Um exemplo é a corretora <a href="https://www.avenue.us/" target="_blank" >Avenue Securities</a>. A criação de uma conta na Avenue e o envio de valores para a corretora é tão simples como nas corretoras nacionais (Rico, Clear, XP, Banco Inter, etc), assim como as operações de compra e venda de ações. Além disto, a Avenue oferece corretagem gratuita para até 10 operações por mês. Desta forma, o investidor, ao invés de comprar certificados, adquire diretamente os papéis das empresas.
                       </p>
+
+                      <blockquote>
+                        <p>
+                        A oportunidade (do investimento no Brasil) é melhor por que as peripécias de mercado se transformam com tanta velocidade que acaba gerando um clima de oportunidade mais intenso que lá fora, onde as economias já mais estáveis.
+                        </p>
+                      </blockquote>
 
                       <p className={`${artigoStyles.subtitle}`}>Referências</p>
                       <p>
