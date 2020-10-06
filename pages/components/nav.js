@@ -12,7 +12,7 @@ const Nav = () => {
             <span className="jl_close_2"></span>
           </span>
         </div>
-        <form method="get" className="searchform_theme" action="index.html#">
+        {/* <form method="get" className="searchform_theme" action="index.html#">
           <input
             type="text"
             placeholder="Buscar..."
@@ -23,7 +23,7 @@ const Nav = () => {
           <button type="submit" className="button">
             <i className="fa fa-search"></i>
           </button>
-        </form>
+        </form> */}
       </div>
       <div className="mobile_menu_overlay"></div>
     </>

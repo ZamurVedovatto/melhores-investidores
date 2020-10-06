@@ -7,6 +7,8 @@ const HeroSectionComponent = dynamic(() =>
 const LatestArticlesComponent = dynamic(() =>
   import("./components/home/latest-articles")
 );
+const DyCalculationComponent = dynamic(() =>
+  import("./components/dy-calculation/DyCalculation"))
 
 // import Servers from "./../constants/servers";
 // const api = Servers.api;
@@ -20,7 +22,8 @@ const Home = (props) => {
         <div
           className="container"
           style={{ clear: "both", paddingTop: "50px", paddingBottom: "0px" }}
-        >
+        > 
+          <DyCalculationComponent></DyCalculationComponent>
           <HeroSectionComponent posts={posts} />
           <LatestArticlesComponent posts={posts} />
         </div>
