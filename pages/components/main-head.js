@@ -36,6 +36,8 @@ const MainHead = () => {
           media="all"
         />
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
         <script src="/js/jquery.js"></script>
         <script src="/js/fluidvids.js"></script>
         <script src="/js/infinitescroll.js"></script>
