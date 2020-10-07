@@ -1,51 +1,105 @@
 import React from 'react';
 import { useState } from "react";
 import { Button } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+
 import Slider from '@material-ui/core/Slider';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Input from '@material-ui/core/Input';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import TextField from '@material-ui/core/TextField';
+import NumberFormat from 'react-number-format';
 
+const currencyFormatter = (value) => {
+  if (!Number(value)) return "";
+
+  const formatter = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+  });
+
+  return `${formatter.format(value / 100)}`;
+}
+
+function NumberFormatCustom(props) {
+  const { inputRef, onChange, ...other } = props;
+
+  return (
+    <NumberFormat
+      {...other}
+      getInputRef={inputRef}
+      onValueChange={(values) => {
+        onChange({
+          target: {
+            name: props.name,
+            value: values.value,
+          },
+        });
+      }}
+      isNumericString
+      suffix=",00"
+      prefix="R$"
+    />
+  );
+}
+
+function NumberFormatPercentual(props) {
+  const { inputRef, onChange, ...other } = props;
+
+  return (
+    <NumberFormat
+      {...other}
+      getInputRef={inputRef}
+      onValueChange={(values) => {
+        onChange({
+          target: {
+            name: props.name,
+            value: values.value,
+          },
+        });
+      }}
+      isNumericString
+      suffix="%"
+    />
+  );
+}
 
 const DyCalculationComponent = () => {
-  const [montanteInicial, setMontanteInicial] = useState(10000);
-  const [dividendYield, setDividendYield] = useState(10);
-  const [aporteMensal, setAporteMensal] = useState(500);
+  const [montanteInicial, setMontanteInicial] = useState(1500);
+  const [percentualValorizacao, setPercentualValorizacao] = useState(6.5);
+  const [aporteMensal, setAporteMensal] = useState(350);
   const [anosRendendo, setAnosRendendo] = useState(15);
-  const [valorInvestido, setValorInvestido] = useState(14);
-  const [patrimonioFinal, setPatrimonioFinal] = useState(13);
+  const [valorInvestido, setValorInvestido] = useState(64500);
+  const [patrimonioFinal, setPatrimonioFinal] = useState(112024);
 
   const onCalculatePatrimonioFinal = (e) => {
     e.preventDefault();
     setPatrimonioFinal(calcDY(montanteInicial, anosRendendo));
-    setValorInvestido((anosRendendo * (12 * aporteMensal) + montanteInicial).toFixed(2));
+    setValorInvestido((anosRendendo * (12 * aporteMensal) + montanteInicial).toFixed(0));
   }
 
   const calcDY = (calculatedAmount, months) => {
-    if (months > 1) {
-      let amount = ((calculatedAmount + (12 * aporteMensal)) * (100 + dividendYield))/100;
+    if (Number(months) > 1) {
+      let amount = ((calculatedAmount + (12 * aporteMensal)) * (100 + Number(percentualValorizacao)))/100;
+      console.log(amount);
+      console.log(months);
+      console.log(Number(percentualValorizacao));
+      console.log(" ")
       return calcDY(amount, months - 1);
     }
-    return (((calculatedAmount + (12 * aporteMensal)) * (100 + dividendYield))/100).toFixed(2);
+    return (((calculatedAmount + (12 * aporteMensal)) * (100 + Number(percentualValorizacao)))/100).toFixed(0);
   }
 
   const handleSliderChange = (event, newValue) => {
-    setMontanteInicial(newValue);
+    setMontanteInicial(newValue); 
   };
 
   const handleInputChange = (event) => {
     setMontanteInicial(event.target.value === '' ? '' : Number(event.target.value));
-  };
-
-  const handleBlur = (value) => {
-    let valueNumber = Number(value);
-    if (valueNumber < 0) {
-      setMontanteInicial(0);
-    } else {
-      setMontanteInicial(valueNumber);
-    }
   };
 
   const valuetext = (value) => {
@@ -75,43 +129,19 @@ const DyCalculationComponent = () => {
     },
   ];
 
-
-
   return(
-    <div className="dy-calculation-wrapper uk-card uk-card-default uk-card-body">
-      <span className="dy-calculation-title">Calculadora de Dividendos</span>
-        <div className="dy-calculation-content">
+    <Card style={{ padding: '0', marginBottom: "1rem"}}>
+      <CardHeader style={{ padding: '1rem 2rem', backgroundColor: "#1584c9", color: "white"}} title="Simulador de Valorização de Patrimônio" subheader="Versão Beta" />
+      <CardContent style={{ padding: '2rem 4rem', borderBottom: "1px solid lightgrey"}}>
+        <div style={{ lineHeight: "1.2" }}>
+          <span> Simule os resultados do seu investimento de acordo com o investimento inicial, percentual de valorização anual esperado, possível média de aportes mensais e a quantidade de anos em que o seu investimento ficará rendendo.</span>
+        </div>
+        <div className="dy-calculation-content" style={{ marginTop: "2rem" }}>
           <form className="uk-grid-small" uk-grid="true">
             <div className="uk-width-1-1@s">
-              {/* <Typography id="discrete-slider" gutterBottom>Montante inicial</Typography>
-              <Slider
-                step={100}
-                defaultValue={1000}
-                min={100}
-                max={100000}
-                getAriaValueText={valuetext}
-                valueLabelDisplay="on"
-                value={montanteInicial}
-                onChange={handleChange}
-                marks={marks}
-                aria-labelledby="discrete-slider"
-                valueLabel= {{
-                  left: 'calc(-50% + 12px)',
-                  top: -22,
-                  '& *': {
-                    background: 'transparent',
-                    color: '#000',
-                  },
-                }}
-              /> */}
-
-
-              <Typography id="input-slider" gutterBottom>Montante inicial</Typography>
+              <label className="uk-form-label" htmlFor="form-stacked-text">Investimento Inicial</label>
               <Grid container spacing={10} alignItems="center">
-                <Grid item>
-                  <MonetizationOnIcon />
-                </Grid>
-                <Grid item xs>
+                <Grid item xs style={{ padding: "2rem 4rem" }}>
                   <Slider
                     step={100}
                     defaultValue={10000}
@@ -125,62 +155,83 @@ const DyCalculationComponent = () => {
                     aria-labelledby="input-slider"
                   />
                 </Grid>
-                <Grid item>
-                  <TextField id="outlined-basic" label="Investimento inicial" variant="outlined"
+                <Grid item style={{ padding: "0 2rem" }}>
+                  <TextField
+                    label="Investimento inicial"
                     value={montanteInicial}
                     onChange={handleInputChange}
-                    onBlur={(event) => handleBlur(event.target.value)}
-                  />
-
-                  {/* <Input
-                    margin="dense"
-                    value={montanteInicial}
-                    onChange={handleInputChange}
-                    onBlur={handleBlur}
-                    inputProps={{
-                      step: 10,
-                      min: 0,
-                      max: 100,
-                      type: 'number',
-                      'aria-labelledby': 'input-slider',
+                    name="numberformat"
+                    id="formatted-numberformat-input"
+                    InputProps={{
+                      inputComponent: NumberFormatCustom,
                     }}
-                  /> */}
+                  />
                 </Grid>
               </Grid>
-
-
-
-
-
             </div>
             <div className="uk-width-1-4@s">
-              <label className="uk-form-label" htmlFor="form-stacked-text">Dividend Yield</label>
-              <input className="uk-input" type="number" value={dividendYield} onChange={e => setDividendYield(e.target.value)} />
+              <TextField
+                label="Valorização Anual"
+                value={percentualValorizacao}
+                onChange={e => setPercentualValorizacao(e.target.value)}
+                name="percentualValorização"
+                id="formatted-percentualValorização-input"
+                InputProps={{
+                  inputComponent: NumberFormatPercentual,
+                }}
+              />
             </div>
             <div className="uk-width-1-4@s">
-              <label className="uk-form-label" htmlFor="form-stacked-text">Aporte mensal</label>
-              <input className="uk-input" type="number" value={aporteMensal} onChange={e => setAporteMensal(e.target.value)} />
+              <TextField
+                label="Aporte mensal"
+                value={aporteMensal}
+                onChange={e => setAporteMensal(e.target.value)}
+                name="aporteMensal"
+                id="formatted-aporteMensal-input"
+                InputProps={{
+                  inputComponent: NumberFormatCustom,
+                }}
+              />
             </div>
             <div className="uk-width-1-4@s">
-              <label className="uk-form-label" htmlFor="form-stacked-text">Por quantos anos</label>
-              <input className="uk-input" type="number" value={anosRendendo} onChange={e => setAnosRendendo(e.target.value)} />
+              <TextField
+                label="Por quantos anos"
+                value={anosRendendo}
+                onChange={e => setAnosRendendo(e.target.value)}
+                name="anosRendendo"
+                id="formatted-anosRendendo-input"
+              />
             </div>
-            <div className="uk-width-1-4@s">
+            <div className="uk-width-1-4@s" style={{display: "flex", flexDirection: "column", justifyContent: "flex-end", marginBottom: ".15rem" }}>
               <Button variant="contained" color="primary" onClick={(e) => onCalculatePatrimonioFinal(e) }>Calcular</Button>
             </div>
           </form>
-          <div className="dy-results" uk-grid="true">
-            <div className="uk-width-1-2@s">
-              <label className="uk-form-label" htmlFor="form-stacked-text">Patrimônio acumulado</label>
-              <input className="uk-input" type="number" value={patrimonioFinal} disabled />
-            </div>
-            <div className="uk-width-1-2@s">
-              <label className="uk-form-label" htmlFor="form-stacked-text">Valor investido</label>
-              <input className="uk-input" type="number" value={valorInvestido} disabled />
-            </div>
-          </div>
         </div>
-    </div>
+      </CardContent>
+      <CardActions style={{ padding: '2rem 4rem' }}>
+        <div uk-grid="true">
+        <div className="uk-width-1-2@s">
+          <TextField
+              label="Valor Investido"
+              value={valorInvestido}
+              InputProps={{
+                inputComponent: NumberFormatCustom,
+              }}
+            />
+          </div>
+          <div className="uk-width-1-2@s">
+            <TextField
+              label="Patrimônio Acumulado"
+              value={patrimonioFinal}
+              InputProps={{
+                inputComponent: NumberFormatCustom,
+              }}
+            />
+          </div>
+
+        </div>
+      </CardActions>
+    </Card>
   )
 }
 

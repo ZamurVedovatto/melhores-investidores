@@ -28,13 +28,6 @@ const LatestArticles = (props) => {
                                 <Link href={`/artigos/${article.url}`}>
                                   <a className="link_grid_header_absolute" title={article.title}></a>
                                 </Link>                                  
-                                <span className="meta-category-small">
-                                  {
-                                    article.categories && article.categories.map(category =>
-                                      <a key={category} className="post-category-color-text" style={{ background: "#7fbc1e" }} >{category}</a>
-                                    )
-                                  }
-                                </span>
                                 <div className="wrap_box_style_main image-post-title">
                                   <h3 className="image-post-title">
                                     <Link href={`/artigos/${article.url}`}>

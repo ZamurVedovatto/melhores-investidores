@@ -23,7 +23,9 @@ const Home = (props) => {
           className="container"
           style={{ clear: "both", paddingTop: "50px", paddingBottom: "0px" }}
         > 
-          <DyCalculationComponent></DyCalculationComponent>
+          <div className="only-desktop">
+            <DyCalculationComponent></DyCalculationComponent>
+          </div>
           <HeroSectionComponent posts={posts} />
           <LatestArticlesComponent posts={posts} />
         </div>

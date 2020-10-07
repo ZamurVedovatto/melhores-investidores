@@ -24,7 +24,7 @@ const DicionarioDoInvestidor = (props) => {
   const [termoTitle, setTermoTitle] = useState(
     "Desmitificando todos os termos do mercado financeiro"
   );
-  const [mainContent, setMainContent] = useState("Selecione um termo ao lado");
+  const [mainContent, setMainContent] = useState("Selecione um termo da lista");
   const [secondaryContent, setSecondaryContent] = useState("");
 
   const handleClick = (termo) => {

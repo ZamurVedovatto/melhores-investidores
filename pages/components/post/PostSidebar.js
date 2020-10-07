@@ -1,5 +1,5 @@
-import PostSidebarSocialMedia from "./PostSidebarSocialMedia";
-import PostSidebarCategories from "./PostSidebarCategories";
+// import PostSidebarSocialMedia from "./PostSidebarSocialMedia";
+// import PostSidebarCategories from "./PostSidebarCategories";
 import PostSidebarPosts from "./PostSidebarPosts";
 
 const PostSidebar = (props) => {
@@ -7,10 +7,10 @@ const PostSidebar = (props) => {
 
   return (
     <>
-    {
+    {/* {
       posts &&
       <PostSidebarCategories posts={posts} />
-    }
+    } */}
     {
       posts &&
       <PostSidebarPosts posts={posts.reverse().slice(0,4)} />

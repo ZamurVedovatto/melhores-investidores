@@ -33,6 +33,13 @@ const HeaderMenuMobile = () => {
               </a>
             </Link>
           </li>
+          <li className="menu-item only-desktop">
+            <Link href="/simuladores">
+              <a>
+                Simuladores<span className="border-menu"></span>
+              </a>
+            </Link>
+          </li>
         </ul>
         <span className="jl_none_space"></span>
         <div id="disto_about_us_widget-2" className="widget jellywp_about_us_widget">

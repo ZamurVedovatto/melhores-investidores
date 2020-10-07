@@ -70,6 +70,7 @@
   .dicionarioDefinicao {
     height: 40vh;
     max-height: 50vh;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -100,3 +101,180 @@
     }
   }
 }
+
+
+
+/* Responsividade */
+@media only screen and (max-width: 420px) {
+  .dicionarioWrapper {
+    .dicionarioList {
+      form.uk-search {
+        span {}
+        input {}
+      }  
+      ul {
+        &::-webkit-scrollbar {}
+        &::-webkit-scrollbar-track {}
+        &::-webkit-scrollbar-thumb {}
+        &::-webkit-scrollbar-thumb:hover {}
+          li {
+          a {
+            &:hover {}
+            &.active {}
+          }
+        }
+      }
+    }
+    .dicionarioDefinicao {
+      .definicaoTop {
+        span {        
+          &.mainInfo {}
+          &.secondaryInfo {}
+        }  
+      }
+      .definicaoLinks {
+        button {}
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .dicionarioWrapper {
+    .dicionarioList {
+      form.uk-search {
+        span {}
+        input {}
+      }  
+      ul {
+        &::-webkit-scrollbar {}
+        &::-webkit-scrollbar-track {}
+        &::-webkit-scrollbar-thumb {}
+        &::-webkit-scrollbar-thumb:hover {}
+          li {
+          a {
+            &:hover {}
+            &.active {}
+          }
+        }
+      }
+    }
+    .dicionarioDefinicao {
+      .definicaoTop {
+        span {        
+          &.mainInfo {}
+          &.secondaryInfo {}
+        }  
+      }
+      .definicaoLinks {
+        button {}
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .dicionarioWrapper {
+    .dicionarioList {
+      form.uk-search {
+        span {}
+        input {}
+      }  
+      ul {
+        height: 30vh !important;
+        max-height: 30vh !important;
+        &::-webkit-scrollbar {}
+        &::-webkit-scrollbar-track {}
+        &::-webkit-scrollbar-thumb {}
+        &::-webkit-scrollbar-thumb:hover {}
+          li {
+          a {
+            font-size: 1.1rem;
+            &:hover {}
+            &.active {}
+          }
+        }
+      }
+    }
+    .dicionarioDefinicao {
+      padding: 1rem;
+      .definicaoTop {
+        h1 {
+          font-size: 1.2rem;
+        }
+        span {        
+          &.mainInfo {}
+          &.secondaryInfo {}
+        }  
+      }
+      .definicaoLinks {
+        button {}
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .dicionarioWrapper {
+    .dicionarioList {
+      form.uk-search {
+        span {}
+        input {}
+      }  
+      ul {
+        &::-webkit-scrollbar {}
+        &::-webkit-scrollbar-track {}
+        &::-webkit-scrollbar-thumb {}
+        &::-webkit-scrollbar-thumb:hover {}
+          li {
+          a {
+            &:hover {}
+            &.active {}
+          }
+        }
+      }
+    }
+    .dicionarioDefinicao {
+      .definicaoTop {
+        span {        
+          &.mainInfo {}
+          &.secondaryInfo {}
+        }  
+      }
+      .definicaoLinks {
+        button {}
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1260px) {
+  .dicionarioWrapper {
+    .dicionarioList {
+      form.uk-search {
+        span {}
+        input {}
+      }  
+      ul {
+        &::-webkit-scrollbar {}
+        &::-webkit-scrollbar-track {}
+        &::-webkit-scrollbar-thumb {}
+        &::-webkit-scrollbar-thumb:hover {}
+          li {
+          a {
+            &:hover {}
+            &.active {}
+          }
+        }
+      }
+    }
+    .dicionarioDefinicao {
+      .definicaoTop {
+        span {        
+          &.mainInfo {}
+          &.secondaryInfo {}
+        }  
+      }
+      .definicaoLinks {
+        button {}
+      }
+    }
+  }
+}
+/* End Responsividade */

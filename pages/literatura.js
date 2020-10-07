@@ -33,7 +33,7 @@ const LiteraturaMain = (props) => {
         }}
       >
         <div className="livrosintro-content col-12">
-          <div className="row" style={{ width: "100%" }}>
+          <div className="row" style={{ padding: "0 1rem" }}>
             {livros.map((livro) => (
               <div className="col-sm-12 col-md-4 col-lg-3" key={livro.id}>
                 <CardLivroComponent livro={livro} />

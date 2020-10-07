@@ -21,19 +21,6 @@ const ArticleCard = (props) => {
                 <div className="background_over_image"></div>
               </a>
             </Link>
-            <span className="meta-category-small">
-              {info.categories &&
-                info.categories.map((category) => (
-                  <a
-                    key={category}
-                    className="post-category-color-text"
-                    style={{ background: "#36c942" }}
-                    href={`artigos&category=${category}`}
-                  >
-                    {category}
-                  </a>
-                ))}
-            </span>
           </div>
           <div className="post-entry-content">
             <div className="post-entry-content-wrapper">

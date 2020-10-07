@@ -46,6 +46,13 @@ const HeaderMainMenu = () => {
                     </a>
                   </li>
                 </Link>
+                <Link href="/simuladores" >
+                  <li className="menu-item only-desktop">
+                    <a>
+                      Simuladores<span className="border-menu"></span>
+                    </a>
+                  </li>
+                </Link>
                 {/* <Link href="/wallet">
                   <li className="menu-item">
                     <a>
