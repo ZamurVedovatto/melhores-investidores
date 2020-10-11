@@ -7,12 +7,16 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 
 import Slider from '@material-ui/core/Slider';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Input from '@material-ui/core/Input';
-import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import TextField from '@material-ui/core/TextField';
 import NumberFormat from 'react-number-format';
+
+
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
 
 const currencyFormatter = (value) => {
   if (!Number(value)) return "";
@@ -95,8 +99,11 @@ const DyCalculationComponent = () => {
   const [anosRendendo, setAnosRendendo] = useState(15);
   const [valorInvestido, setValorInvestido] = useState(64500);
   const [patrimonioFinal, setPatrimonioFinal] = useState(112025);
+  const [dividends, setDividends] = useState({ receivement: false, frequency: '3', value: 4.5 });
+
 
   const onCalculatePatrimonioFinal = (e) => {
+    console.log(dividends)
     e.preventDefault();
     setPatrimonioFinal(calcDY(montanteInicial, anosRendendo));
     setValorInvestido((anosRendendo * (12 * aporteMensal) + montanteInicial).toFixed(0));
@@ -105,10 +112,6 @@ const DyCalculationComponent = () => {
   const calcDY = (calculatedAmount, months) => {
     if (Number(months) > 1) {
       let amount = ((calculatedAmount + (12 * aporteMensal)) * (100 + Number(percentualValorizacao)))/100;
-      console.log(amount);
-      console.log(months);
-      console.log(Number(percentualValorizacao));
-      console.log(" ")
       return calcDY(amount, months - 1);
     }
     return (((calculatedAmount + (12 * aporteMensal)) * (100 + Number(percentualValorizacao)))/100).toFixed(0);
@@ -130,6 +133,10 @@ const DyCalculationComponent = () => {
     setAnosRendendo(newValue); 
   };
 
+  const handleSliderChangeDividendsValue  = (event, newValue) => {
+    setDividends({...dividends, value: newValue});
+  };
+
   const handleInputChange = (event, type) => {
     let newValue = event.target.value === '' ? '' : Number(event.target.value)
 
@@ -146,6 +153,8 @@ const DyCalculationComponent = () => {
       case 'anosRendendo':
         setAnosRendendo(newValue); 
         break;
+      case 'dividendsValue':
+        setDividends({...dividends, value: newValue});
       default:
         break;
     }    
@@ -162,6 +171,16 @@ const DyCalculationComponent = () => {
   const OnSetNumberValue = (value) => {
     return value;
   }
+
+  const handleChangeDividendsReceivement = (event) => {
+    let receivement = (event.target.value === 'true') ? true : false;
+    setDividends({...dividends, receivement});
+  };
+
+  const handleChangeDividendsFrequency = (event) => {
+    let frequency = event.target.value;
+    setDividends({...dividends, frequency});
+  };
 
   const montanteInicialMarks = [
     {
@@ -272,10 +291,10 @@ const DyCalculationComponent = () => {
     <Card style={{ padding: '0', marginBottom: "1rem"}}>
       <CardHeader style={{ padding: '1rem 2rem', backgroundColor: "#1584c9", color: "white"}} title="Simulador de Valorização de Patrimônio" />
       <CardContent style={{ padding: '2rem 4rem', borderBottom: "1px solid lightgrey"}}>
-        <div style={{ lineHeight: "1.2" }}>
+        {/* <div style={{ lineHeight: "1.2" }}>
           <span> Simule os resultados do seu investimento de acordo com o investimento inicial, percentual de valorização anual esperado, possível média de aportes mensais e a quantidade de anos em que o seu investimento ficará rendendo.</span>
-        </div>
-        <div className="dy-calculation-content" style={{ marginTop: "2rem" }}>
+        </div> */}
+        <div className="dy-calculation-content">
           <form className="uk-grid-small" uk-grid="true">
 
             {/* montanteInicial */}
@@ -404,6 +423,75 @@ const DyCalculationComponent = () => {
                   />
                 </Grid>
               </Grid>
+            </div>
+
+            {/* dividendos */}
+            <div className="uk-width-1-1@s uk-card uk-card-default" style={{ padding: "1rem 2rem" }}>
+              <Grid container spacing={10} alignItems="center">
+                <Grid item xs style={{ padding: "2rem 4rem 0" }}>
+                  <FormControl component="fieldset">
+                    <FormLabel style={{ margin: "0", padding: "1rem  0 .25rem" }} component="legend">Haverá recebimento de dividendos?</FormLabel>
+                    <RadioGroup row aria-label="dividendsReceivement" name="dividendsReceivement" value={dividends.receivement} onChange={handleChangeDividendsReceivement}>
+                      <FormControlLabel value={true} control={<Radio />} label="Sim" />
+                      <FormControlLabel value={false} control={<Radio />} label="Não" />
+                    </RadioGroup>
+                  </FormControl>
+                </Grid>
+              </Grid>
+              {
+                (dividends.receivement) ?
+                <Grid container spacing={10} alignItems="center">
+                  <Grid item xs style={{ padding: "2rem 4rem 0" }}>
+                    <FormControl component="fieldset">
+                      <FormLabel style={{ margin: "0", padding: "1.5rem 0 .25rem" }} component="legend">Periodicidade do recebimento dos dividendos</FormLabel>
+                      <RadioGroup row aria-label="dividendsFrequency" name="dividendsFrequency" value={dividends.frequency} onChange={handleChangeDividendsFrequency}>
+                        <FormControlLabel value="1" control={<Radio />} label="Mensal" />
+                        <FormControlLabel value="2" control={<Radio />} label="Bimestral" />
+                        <FormControlLabel value="3" control={<Radio />} label="Trimestral" />
+                        <FormControlLabel value="4" control={<Radio />} label="Quadrimestral" />
+                        <FormControlLabel value="6" control={<Radio />} label="Semestral" />
+                        <FormControlLabel value="12" control={<Radio />} label="Anual" />
+                      </RadioGroup>
+                    </FormControl>
+                  </Grid>
+
+                  {/* dividend yield */}
+                  <div className="uk-width-1-1@s" style={{ padding: "1rem 4rem 2rem" }}>
+                    <label className="uk-form-label" htmlFor="form-stacked-text">Dividend Yield</label>
+                    <Grid container spacing={10} alignItems="center">
+                      <Grid item xs style={{ padding: "2rem 4rem 0" }}>
+                        <Slider
+                          step={.25}
+                          defaultValue={4.5}
+                          min={0}
+                          max={50}
+                          getAriaValueText={OnSetPercentualValue}
+                          valueLabelDisplay="auto"
+                          value={typeof dividends.value === 'number' ? dividends.value : 0}
+                          onChange={handleSliderChangeDividendsValue}
+                          marks={percentualValorizacaoMarks}
+                          aria-labelledby="input-slider"
+                        />
+                      </Grid>
+                      <Grid item style={{ padding: "0 2rem" }}>
+                        <TextField
+                          value={dividends.value}
+                          onChange={(event) => handleInputChange(event, 'dividendsValue')}
+                          name="dividendsValue"
+                          id="formatted-dividendsValue-input"
+                          InputProps={{
+                            inputComponent: NumberFormatPercentual,
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                  </div>
+                </Grid>
+
+
+                :
+                <></>
+              }
             </div>
 
 

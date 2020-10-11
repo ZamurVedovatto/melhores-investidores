@@ -2,7 +2,7 @@ import Link from "next/Link";
 
 const HeaderMainMenu = () => {
   return (
-    <div id="menu_wrapper" className="menu_wrapper  jl_menu_sticky jl_stick ">
+    <div className="menu_wrapper jl_menu_sticky jl_stick" id="menu_wrapper">
       <div className="container">
         <div className="row">
           <div className="main_menu col-md-12">
