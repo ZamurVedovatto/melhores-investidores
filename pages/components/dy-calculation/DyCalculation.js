@@ -97,10 +97,10 @@ const DyCalculationComponent = () => {
   const [percentualValorizacao, setPercentualValorizacao] = useState(6.5);
   const [aporteMensal, setAporteMensal] = useState(350);
   const [anosRendendo, setAnosRendendo] = useState(15);
+  const [dividends, setDividends] = useState({ receivement: false, frequency: '3', value: 4.5 });
+  
   const [valorInvestido, setValorInvestido] = useState(64500);
   const [patrimonioFinal, setPatrimonioFinal] = useState(112025);
-  const [dividends, setDividends] = useState({ receivement: false, frequency: '3', value: 4.5 });
-
 
   const onCalculatePatrimonioFinal = (e) => {
     console.log(dividends)
