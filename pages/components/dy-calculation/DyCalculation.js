@@ -93,29 +93,57 @@ function NumberFormatNumber(props) {
 }
 
 const DyCalculationComponent = () => {
-  const [montanteInicial, setMontanteInicial] = useState(1500);
+  const initialResultsState = {
+    valorInvestido: 0,
+    dividendos: 0,
+    patrimonio: {
+      comDividendos: [],
+      semDividendos: []
+    }
+  };
+
+  const [montanteInicial, setMontanteInicial] = useState(1000);
   const [percentualValorizacao, setPercentualValorizacao] = useState(6.5);
   const [aporteMensal, setAporteMensal] = useState(350);
-  const [anosRendendo, setAnosRendendo] = useState(15);
-  const [dividends, setDividends] = useState({ receivement: false, frequency: '3', value: 4.5 });
-  
-  const [valorInvestido, setValorInvestido] = useState(64500);
-  const [patrimonioFinal, setPatrimonioFinal] = useState(112025);
+  const [anosRendendo, setAnosRendendo] = useState(1);
+  const [dividends, setDividends] = useState({ receivement: false, frequency: '4', value: 4.5 });
+  const [results, setResults] = useState(initialResultsState)
 
   const onCalculatePatrimonioFinal = (e) => {
-    console.log(dividends)
     e.preventDefault();
-    setPatrimonioFinal(calcDY(montanteInicial, anosRendendo));
-    setValorInvestido((anosRendendo * (12 * aporteMensal) + montanteInicial).toFixed(0));
+  
+    let months = anosRendendo * 12;
+    let percMonthlyAppreciation = percentualValorizacao / 12;
+
+    setResults({...results, valorInvestido: calcValorInvestido(months)});
+    calcResults(months, percMonthlyAppreciation);
   }
 
-  const calcDY = (calculatedAmount, months) => {
-    if (Number(months) > 1) {
-      let amount = ((calculatedAmount + (12 * aporteMensal)) * (100 + Number(percentualValorizacao)))/100;
-      return calcDY(amount, months - 1);
-    }
-    return (((calculatedAmount + (12 * aporteMensal)) * (100 + Number(percentualValorizacao)))/100).toFixed(0);
+  const calcValorInvestido = (months) => {    
+    return montanteInicial + (months * aporteMensal);
   }
+
+  const calcResults = (months, percMonthlyAppreciation) => {
+    let dyPercAppreciation = dividends.value / (12 / Number(dividends.frequency));
+    let dyFrequency = Number(dividends.frequency);
+    let amount = montanteInicial;
+
+    for (let i = 1; i <= months; i++) {
+      results.patrimonio.comDividendos.push(amount);
+
+      let initial = amount;
+      let appreciation = (initial * percMonthlyAppreciation / 100);
+      let dy = (i % dyFrequency === 0) ? (initial * dyPercAppreciation / 100) : 0;
+      let aporte = aporteMensal;
+      amount = initial + appreciation + dy + aporte;
+
+      // console.log(initial, appreciation, dy, aporte)
+
+    }
+
+    // console.log(results.patrimonio.comDividendos)
+  }
+
 
   const handleSliderChange = (event, newValue) => {
     setMontanteInicial(newValue); 
@@ -426,7 +454,7 @@ const DyCalculationComponent = () => {
             </div>
 
             {/* dividendos */}
-            <div className="uk-width-1-1@s uk-card uk-card-default" style={{ padding: "1rem 2rem" }}>
+            {/* <div className="uk-width-1-1@s uk-card uk-card-default" style={{ padding: "1rem 2rem" }}>
               <Grid container spacing={10} alignItems="center">
                 <Grid item xs style={{ padding: "2rem 4rem 0" }}>
                   <FormControl component="fieldset">
@@ -455,7 +483,6 @@ const DyCalculationComponent = () => {
                     </FormControl>
                   </Grid>
 
-                  {/* dividend yield */}
                   <div className="uk-width-1-1@s" style={{ padding: "1rem 4rem 2rem" }}>
                     <label className="uk-form-label" htmlFor="form-stacked-text">Dividend Yield</label>
                     <Grid container spacing={10} alignItems="center">
@@ -487,12 +514,10 @@ const DyCalculationComponent = () => {
                     </Grid>
                   </div>
                 </Grid>
-
-
                 :
                 <></>
               }
-            </div>
+            </div> */}
 
 
             <div className="uk-width-1-1@s" style={{display: "flex", flexDirection: "column", justifyContent: "flex-end", margin: "1.5rem 0 0" }}>
@@ -503,10 +528,10 @@ const DyCalculationComponent = () => {
       </CardContent>
       <CardActions style={{ padding: '2rem 4rem' }}>
         <div uk-grid="true">
-        <div className="uk-width-1-2@s">
+        {/* <div className="uk-width-1-2@s">
           <TextField
               label="Valor Investido"
-              value={valorInvestido}
+              value={results.valorInvestido}
               InputProps={{
                 inputComponent: NumberFormatCustom,
               }}
@@ -515,12 +540,12 @@ const DyCalculationComponent = () => {
           <div className="uk-width-1-2@s">
             <TextField
               label="Patrimônio Acumulado"
-              value={patrimonioFinal}
+              value={results.patrimonio.comDividendos}
               InputProps={{
                 inputComponent: NumberFormatCustom,
               }}
             />
-          </div>
+          </div> */}
 
         </div>
       </CardActions>
